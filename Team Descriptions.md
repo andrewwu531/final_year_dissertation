@@ -1,6 +1,6 @@
 # Table of Contents
 
-- **Team Members/ Roles/ Contact Details**
+- **Team Members & Roles & Contact Details**
 - **Expertise for Each Member**
 
 # Team Members & Roles & Contact Details
