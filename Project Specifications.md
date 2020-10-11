@@ -37,9 +37,9 @@ A brief mechanism of the app is followed. First, the customers will be guided by
 ## i) Minimal Viable Product
 ## ii) Future Work
 # Detailed Project Conceptual Analysis
-# Requirement Gathering*
+# Requirement Gathering
 ## i) Value Proposition Canvas
-  ## ii) User Story Workshop**
+## ii) User Story Workshop
 
 
 # Software Marketing
