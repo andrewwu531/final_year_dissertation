@@ -3,7 +3,7 @@
 - **Team Members/ Roles/ Contact Details**
 - **Expertise for Each Member**
 
-# Team Members/ Roles/ Contact Details
+# Team Members & Roles & Contact Details
 
 * **Ming Ho Wu (Andrew) [Project Developer] - 2133861w@student.gla.ac.uk**
 * **Stephen Brewster [Project Supervisor] - Stephen.Brewster@glasgow.ac.uk**
