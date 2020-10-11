@@ -1,6 +1,6 @@
 # Individual Project 4
 
-## Main Topics
+## Table of Contents
 
 - **Team Organisation**
 - **How to Run the Project**
