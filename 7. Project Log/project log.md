@@ -18,7 +18,7 @@
 ### 26 Sep 2020
 
 * *0.5 hours* set up and structure files and documents, e.g. dissertation, log, notes summary, supervisor meetings
-* *7 hours* convert all available lecture notes into summaries. Distribute relevant contents into related documents. Write dissertation guidance, status report guidance and level 4 notes summary
+* *7 hours* convert all available lecture notes into summaries. Distribute relevant contents into related documents. Write dissertation guidance, status report guidance and level 4 notes summary - see 8. University Material Summary
 
 
 
