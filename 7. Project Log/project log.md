@@ -26,17 +26,17 @@
 
 ### 3 Oct 2020
 
-* *7.5 hours* write one year plan and software requirements - see 1. Dissertation 7Oct20. Those include project significance, project objecive & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation, product pricing, product launch strategy, GDPR, non-disclosure agreement, intellectual properties, product management platform (version control, issue tracker, commit strategy, external backup, minutes/ plans), test driven developemnt, product paper & digital prototype, product coding platform, product evaluations, product testing, product deployment, otthers, appendix and bibliography
+* *7.5 hours* write one year plan and software requirements. Those include project significance, project objecive & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation, product pricing, product launch strategy, GDPR, non-disclosure agreement, intellectual properties, product management platform (version control, issue tracker, commit strategy, external backup, minutes/ plans), test driven developemnt, product paper & digital prototype, product coding platform, product evaluations, product testing, product deployment, otthers, appendix and bibliography - see 1. Dissertation WOrds 7Oct20.
 
 ### 4 Oct 2020
 
-* *7.5 hours* refer to PSD3 notes to see how to do the project. Re-write software requirements - see 1. Dissertation 7Oct20.
+* *7.5 hours* refer to PSD3 notes to see how to do the project. Re-write software requirements - see 1. Dissertation Words 7Oct20.
 
 ## Week 3
 
 ### 10 Oct 2020
 
-* *7.5 hours* apply value proposition canvas to analyse user requirements for each stakeholders (customers, chefs, waiters, owners) - see dissertation words 14 Oct 20
+* *7.5 hours* apply value proposition canvas to analyse user requirements for each stakeholders (customers, chefs, waiters, owners) - see 4. Dissertation Words 14Oct20
 
 
 
