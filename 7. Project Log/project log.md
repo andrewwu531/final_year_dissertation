@@ -1,9 +1,9 @@
 # Timelog
 
 * Project Name: Hi! 
-* Ming Ho Wu (Andrew)
-* 2133861w 
-* Professor Stephen Brewster
+* Stduent: Ming Ho Wu (Andrew)
+* Student ID: 2133861w 
+* Project Supervisor: Professor Stephen Brewster
 
 ## Week 1
 
