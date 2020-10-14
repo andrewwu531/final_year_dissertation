@@ -5,6 +5,14 @@
 * Student ID: 2133861w 
 * Project Supervisor: Professor Stephen Brewster
 
+
+## Summer
+
+### 2 Sep 2020
+
+* *10 hours* My project is self-defined; therefore, I need to pitch it to a supervisor. I drafted up a project summary (Those include project objectives & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation, product pricing)
+
+
 ## Week 1
 
 ### 26 Sep 2020
