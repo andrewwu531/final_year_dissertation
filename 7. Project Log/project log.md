@@ -10,7 +10,7 @@
 
 ### 2 Sep 2020
 
-* *10 hours* My project is self-defined; therefore, I need to pitch it to a supervisor. I drafted up a project summary - those include project objectives & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation and product pricing.
+* *10 hours* My project is self-defined; therefore, I need to pitch it to a supervisor. I drafted up a project summary - those include project objectives & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation and product pricing. See Project Supervisor Meetings 2 Sep 20
 
 
 ## Week 1
@@ -36,7 +36,7 @@
 
 ### 10 Oct 2020
 
-* *7.5 hours* apply value proposition canvas to analyse user requirements for each stakeholders (customers, chefs, waiters, owners)
+* *7.5 hours* apply value proposition canvas to analyse user requirements for each stakeholders (customers, chefs, waiters, owners) - see dissertation words 14 Oct 20
 
 
 
