@@ -30,7 +30,7 @@
 
 ### 4 Oct 2020
 
-* *7.5 hours* refer to PSD3 notes to see how to do the project. Re-write software requirements.
+* *7.5 hours* refer to PSD3 notes to see how to do the project. Re-write software requirements - see 1. Dissertation 7Oct20.
 
 ## Week 3
 
