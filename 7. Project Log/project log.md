@@ -10,7 +10,7 @@
 
 ### 2 Sep 2020
 
-* *10 hours* My project is self-defined; therefore, I need to pitch it to a supervisor. I drafted up a project summary - those include project objectives & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation, product pricing.
+* *10 hours* My project is self-defined; therefore, I need to pitch it to a supervisor. I drafted up a project summary - those include project objectives & market comeptitiveness (minimal viable product, future work), software marketing, detailed project conceptual analysis, annual revenue estimation and product pricing.
 
 
 ## Week 1
