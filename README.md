@@ -1,1 +1,1 @@
-# How to Run the Full Software
+# How to Run the Entire Software
