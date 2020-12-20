@@ -7,7 +7,7 @@ import App from './App';
 //   return <h1>This is the Second App</h1>;
 // }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App login="eveporcello" />, document.getElementById("root"));
 
 // const [,, light] = ["boots", "tent", "headlamp"];
 // console.log(light +" list deconstruction");
