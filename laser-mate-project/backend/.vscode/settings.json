@@ -1,0 +1,16 @@
+{
+    "python.pythonPath": "C:/Users/andre/AppData/Local/Programs/Python/Python39",
+    "editor.formatOnSave": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintPath": "pylint",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.venvPath": "${workspaceFolder}/backend/env",
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E501"
+    ],
+    "git.ignoreLimitWarning": true
+}
