@@ -11,32 +11,33 @@ class ArticleList extends React.Component {
         articles: []
     }
 
-    componentDidMount() {
-        axios.get('http://127.0.0.1:8000/api/')
-            .then(res => {
-                this.setState({
-                    articles: res.data
-                });
-                console.log(res.data);
-            })
+    fetchArticles = () => {
+        axios.get("http://127.0.0.1:8000/api/").then(res => {
+            this.setState({
+                articles: res.data
+            });
+        });
     }
 
+    componentDidMount() {
+        this.fetchArticles();
+    }
+
+    componentWillReceiveProps(newProps) {
+        if (newProps.token) {
+            this.fetchArticles();
+        }
+    }
     render() {
         return (
             <div>
-                <h1>Hi</h1>
-                <CustomLayout>
-                    <Articles data={this.state.articles} />
-                    <br />
-                </CustomLayout>
-                <h2>Create an article</h2>
-                <CustomForm 
-                    requestType="post"
-                    articleID={null}
-                    btnText="Create" />
+                <Articles data={this.state.articles} />
+                <h2>Create an Article</h2>
+                <CustomForm requestType="post" articleID={null} btnText="Create" />
             </div>
         )
     }
 }
 
 export default ArticleList;
+
