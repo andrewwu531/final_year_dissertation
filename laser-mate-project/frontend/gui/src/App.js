@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { BaseRouter } from './routes';
 import 'antd/dist/antd.css';
-
+import { connect } from 'react-redux';
 import CustomLayout from './containers/Layout';
+import * as actions from './store/actions/auth';
+
 
 class App extends Component {
+
+componentDidMount() {
+  this.props.onTryAutoSignup();
+}
+
   render() {
     return (
-      <div className="App">
+      <div>
         <Router>
             
-          <CustomLayout>
+          <CustomLayout {...this.props}>
               <BaseRouter />
           </CustomLayout>
           
@@ -21,17 +28,16 @@ class App extends Component {
   }
 }
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <Router>
-//           <CustomLayout>
-//               <BaseRouter />
-//           </CustomLayout>
-//         </Router>
-//       </div>
-//     );
-//   }
-// }
-export default App;
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.token !== null
+  }
+}
+
+const mapDispatchtoProps = dispatch => {
+  return {
+    onTryAutoSignup: () => dispatch(actions.authCheckState())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchtoProps)(App);
