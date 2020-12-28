@@ -24,7 +24,7 @@ class CustomLayout extends React.Component {
 
                                 <Menu.Item key="2" onClick={this.props.logout}>
                                     Logout
-                </Menu.Item>
+                                </Menu.Item>
 
                                 :
 
@@ -35,9 +35,9 @@ class CustomLayout extends React.Component {
                         }
 
 
-                        <Menu.Item key="1">
-                            <Link to="/">Posts</Link>
-                        </Menu.Item>
+                            <Menu.Item key="1">
+                                <Link to="/">Posts</Link>
+                            </Menu.Item>
 
                     </Menu>
                 </Header>

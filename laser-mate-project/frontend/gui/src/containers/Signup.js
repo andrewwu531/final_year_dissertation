@@ -154,7 +154,7 @@ const RegistrationForm = () => {
       </Form.Item>
       <Form.Item>
         <Button type="primary" htmlType="submit">
-          Register
+          SignUp
         </Button>
       </Form.Item>
     </Form>

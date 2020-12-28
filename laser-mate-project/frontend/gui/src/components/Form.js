@@ -14,6 +14,13 @@ class CustomForm extends React.Component {
             title : event.target.elements.title.value,
             content : event.target.elements.content.value
         }
+        
+        axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
+        axios.defaults.xsrfCookieName = "csrftoken";
+        axios.defaults.headers = {
+          "Content-Type": "application/json",
+          Authorization: `Token ${this.props.token}`,
+        };
 
         if (requestType === "post") {
             await axios.post("http://127.0.0.1:8000/api/create", postObj)
@@ -39,7 +46,7 @@ class CustomForm extends React.Component {
             <Form 
                 onSubmit={ event => 
                     this.handleFormSubmit(
-                        event,
+                        event, 
                         this.props.requestType,
                         this.props.articleID 
                     )
