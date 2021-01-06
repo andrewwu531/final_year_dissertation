@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'laser_mate_v1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'laser_mate',
+        'NAME': 'real_estate',
         'USER': 'postgres',
         'PASSWORD': 'Kwok1212566',
         'HOST': 'localhost'
