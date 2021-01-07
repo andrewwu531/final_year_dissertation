@@ -1,8 +1,8 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 from rest_framework import permissions
-from .models import Restaurant, Restaurant_QR_codes, Restaurant_Menus
+from .models import Restaurant, Restaurant_QR_codes, Restaurant_PDF_Menus
 from .serializers import  Restaurant_Serializer, Restaurant_QR_codes_Serializer, \
-                        Restaurant_Menus_Serializer
+                        Restaurant_PDF_Menus_Serializer
 
 
 class Restaurant_View(RetrieveAPIView):
@@ -10,14 +10,14 @@ class Restaurant_View(RetrieveAPIView):
     serializer_class = Restaurant_Serializer
 
 
-class Restaurant_QR_code_View(ListAPIView):
+class Restaurant_QR_codes_View(ListAPIView):
     queryset = Restaurant_QR_codes
     serializer_class = Restaurant_QR_codes_Serializer
 
 
-class Restaurant_Menus_View(ListAPIView):
-    queryset = Restaurant_Menus
-    serializer_class = Restaurant_Menus_Serializer
+class Restaurant_PDF_Menus_View(ListAPIView):
+    queryset = Restaurant_PDF_Menus
+    serializer_class = Restaurant_PDF_Menus_Serializer
 
 
 

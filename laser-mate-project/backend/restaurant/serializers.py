@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Restaurant, Restaurant_QR_codes, Restaurant_Menus
+from .models import Restaurant, Restaurant_QR_codes, Restaurant_PDF_Menus
 
 
 
@@ -15,9 +15,9 @@ class Restaurant_QR_codes_Serializer(serializers.ModelSerializer):
         fields = '__all__' 
 
 
-class Restaurant_Menus_Serializer(serializers.ModelSerializer):
+class Restaurant_PDF_Menus_Serializer(serializers.ModelSerializer):
     class Meta:
-        model = Restaurant_Menus
+        model = Restaurant_PDF_Menus
         fields = '__all__'
 
 

@@ -1,10 +1,11 @@
 from django.urls import path
-from .views import Restaurant_QR_code_View, Restaurant_Menus_View
+from .views import Restaurant_View, Restaurant_QR_codes_View, Restaurant_PDF_Menus_View
 
 
 urlpatterns = [
-    path('<slug:restaurant_id>/qr-code', Restaurant_QR_code_View.as_view()),
-    path('<slug:restaurant_id>/menus', Restaurant_Menus_View.as_view()),
+    path('owner/r-<slug:restaurant_id>/restaurant-info', Restaurant_View.as_view()),
+    path('owner/r-<slug:restaurant_id>/qr-codes', Restaurant_QR_codes_View.as_view()),
+    path('owner/r-<slug:restaurant_id>/pdf-menus', Restaurant_PDF_Menus_View.as_view()),
     #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),
 ]
 #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),

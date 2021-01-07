@@ -14,14 +14,15 @@ Minutes = (
 )
 
 class Restaurant_Serving_Times(models.Model):
-    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant_id = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant_serving_time_id = models.CharField(max_length=50, primary_key=True, unique=True)
     serving_time_start_hour = models.CharField(max_length=2, choices=Hours, default='1')
     serving_time_start_minutes = models.CharField(max_length=2, choices=Minutes, default='00')
     serving_time_end_hour = models.CharField(max_length=2, choices=Hours, default='1')
     serving_time_end_minutes = models.CharField(max_length=2, choices=Minutes, default='00')
 
     class Meta:
-        verbose_name_plural = '2-1 Restaurant_Serving_Times'
+        verbose_name_plural = '2-1 Restaurant Serving Times'
 
     def __str__(self):
-        return '{}'.format(self.id)
+        return '{}'.format(self.restaurant_serving_time_id)

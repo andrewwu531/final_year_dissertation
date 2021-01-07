@@ -1,30 +1,30 @@
 from django.contrib import admin
-from .models import Restaurant, Restaurant_QR_codes, Restaurant_Menus
+from .models import Restaurant, Restaurant_QR_codes, Restaurant_PDF_Menus
 
 class Restaurant_Admin(admin.ModelAdmin):
-    list_display = ('restaurant_id', 'restaurant_name', 'owner_name', 'restaurant_address', 'restaurant_postcode',
-                    'restaurant_city', 'restaurant_country', 'restaurant_username', 'restaurant_password',
-                    'chef_waiter_username', 'chef_waiter_password', 'restaurant_phone_number', 'number_of_tables',
-                    'restaurant_menu_weblink', 'bank_card_type', 'bank_card_number', 'bank_expiry_month', 'bank_expiry_year',
-                    'bank_security_code', 'bank_card_holder_name', 'opening_time_hour', 'opening_time_minutes',
+    list_display = ('restaurant_id', 'restaurant_name', 'owner_name', 'phone_number', 'address', 'postcode',
+                    'city', 'country', 'bank_card_type', 'bank_card_number', 'bank_expiry_month', 'bank_expiry_year',
+                    'bank_security_code', 'bank_card_holder_name', 'number_of_tables',
+                    'restaurant_menu_link', 'restaurant_account_username', 'restaurant_account_password',
+                    'chef_waiter_account_username', 'chef_waiter_account_password', 'opening_time_hour', 'opening_time_minutes',
                     'closing_time_hour', 'closing_time_minutes')
     search_fields = ('restaurant_id',)
     list_display_links = ('restaurant_id',)
 
 
 class Restaurant_QR_codes_Admin(admin.ModelAdmin):
-    list_display = ('restaurant_id','qr_codes')
+    list_display = ('restaurant_id','qr_code')
     search_fields = ('restaurant_id',)
 
 
-class Restaurant_Menus_Admin(admin.ModelAdmin):
-    list_display = ('restaurant_id','meals_pdfs')
+class Restaurant_PDF_Menus_Admin(admin.ModelAdmin):
+    list_display = ('restaurant_id','pdf_menu')
     search_fields = ('restaurant_id',)
 
 
 admin.site.register(Restaurant, Restaurant_Admin)
 admin.site.register(Restaurant_QR_codes, Restaurant_QR_codes_Admin)
-admin.site.register(Restaurant_Menus, Restaurant_Menus_Admin)
+admin.site.register(Restaurant_PDF_Menus, Restaurant_PDF_Menus_Admin)
 
 
 

@@ -3,7 +3,7 @@ from .views import Restaurant_Serving_Times_View
 
 
 urlpatterns = [
-    path('<slug:restaurant_id>', Restaurant_Serving_Times_View.as_view()),
+    path('owner/r-<slug:restaurant_id>/serving_times', Restaurant_Serving_Times_View.as_view()),
     #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),
 ]
 #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),
