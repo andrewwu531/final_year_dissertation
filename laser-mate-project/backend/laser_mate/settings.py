@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'restaurant',
     'restaurant_serving_times',
     'restaurant_serving_time_categories',
+    'restaurant_serving_time_category_dishes',
 ]
 
 MIDDLEWARE = [

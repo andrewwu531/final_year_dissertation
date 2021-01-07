@@ -14,6 +14,7 @@ urlpatterns = [
     path('api/restaurant/', include('restaurant.urls')),
     path('api/restaurant_serving_times/', include('restaurant_serving_times.urls')),
     path('api/restaurant_serving_time_categories/', include('restaurant_serving_time_categories.urls')),
+    path('api/restaurant_serving_time_category_dishes/', include('restaurant_serving_time_category_dishes.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
