@@ -7,6 +7,7 @@ class Restaurant_Serializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
         fields = '__all__' 
+        lookup_field = 'restaurant_id'
 
 
 class Restaurant_QR_codes_Serializer(serializers.ModelSerializer):

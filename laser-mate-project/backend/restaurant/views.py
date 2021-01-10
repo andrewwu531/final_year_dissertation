@@ -6,8 +6,10 @@ from .serializers import  Restaurant_Serializer, Restaurant_QR_codes_Serializer,
 
 
 class Restaurant_View(RetrieveAPIView):
-    queryset = Restaurant
+    permission_classes = (permissions.AllowAny, )
+    queryset = Restaurant.objects.all()
     serializer_class = Restaurant_Serializer
+    lookup_field = 'restaurant_id'
 
 
 class Restaurant_QR_codes_View(ListAPIView):
