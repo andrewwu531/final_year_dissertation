@@ -8,15 +8,16 @@ import Not_Found from './containers/mobile_web/5NotFound';
 import Home from './containers/web/Home';
 import Contact_Us from './containers/web/Contact_Us';
 import './sass/main.scss';
-
+import Figma_Examples from './containers/mobile_web/Figma_Examples';
 
 
 const App = () => (
     <Router>
         <Switch> 
-            <Route exact path='/r-id' component={Meals} />
+            <Route exact path='/restaurant/:restaurant_id' component={Meals} />
             <Route exact path='/r-id/details' component={Meal} />
-            <Route component={Not_Found} />
+            <Route exact path='/' component={Figma_Examples} />
+            <Route exact path='/:restaurant_id/1' component={Not_Found} />
         </Switch> 
     </Router>
 );
