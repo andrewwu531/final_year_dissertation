@@ -8,3 +8,4 @@ class Restaurant_Serving_Times_Serializer(serializers.ModelSerializer):
         model = Restaurant_Serving_Times
         fields = '__all__' 
 
+

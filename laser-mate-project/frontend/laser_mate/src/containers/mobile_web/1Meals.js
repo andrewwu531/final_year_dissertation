@@ -11,8 +11,25 @@ export default App;
 
 const CustomerMeals = (props) => {
   const [restaurant, setRestaurant] = useState({});
+  const [restaurantServingTimes, setRestaurantServingTimes] = useState({});
+  // restaurant_serving_time_id: "",
+  // serving_time_start_hour: "",
+  // serving_time_start_minutes: "",
+  // serving_time_end_hour: "",
+  // serving_time_end_minutes: "",
+  // restaurant_id: "1"
+
   const location = useLocation()
-  const path1 = location.pathname;
+  const full_path = location.pathname;
+  const path_split = full_path.split('/');
+  const restaurant_id_path = path_split[1];
+  const table_number_path = path_split[2];
+  const restaurant_id = restaurant_id_path;
+  console.log('full_path: ' + full_path);
+  console.log('path_split: ' + path_split);
+  console.log('restaurant_id_path: ' + restaurant_id_path);
+  console.log('table_number_path: ' + table_number_path);
+  // find all serving times based on r-id, find matching serving time
   const {
     textGoToPayment,
     scrollGroup1,
@@ -42,15 +59,85 @@ const CustomerMeals = (props) => {
     overlapgroup2Props,
   } = props;
 
-  useEffect(() => {
-    axios.get(`http://localhost:8000/api/restaurant${path1}`)
-    .then(res => {
-        setRestaurant(res.data);
-    })
-    .catch(err => {
+  const getCurrentServingTimes = () => {
+    let result = [];
+    var today = new Date();
+    var isOpenBusiness = false;
+    var current_hour = today.getHours();
+    var current_minutes = today.getMinutes();
+    console.log("current hour and minutes: " + current_hour + ": " + current_minutes);
 
-    });
-  }, [path1]);    
+    for (let i = 0; i < restaurantServingTimes.length; i++) {
+      var serving_time_start_hour = restaurantServingTimes[i].serving_time_start_hour;
+      var serving_time_start_minutes = restaurantServingTimes[i].serving_time_start_minutes;
+      var serving_time_end_hour = restaurantServingTimes[i].serving_time_end_hour;
+      var serving_time_end_minutes = restaurantServingTimes[i].serving_time_end_minutes;
+      console.log("condition - for loop");
+      if ((serving_time_start_hour <= current_hour) && (serving_time_end_hour >= current_hour)) {
+        if (current_hour === serving_time_start_hour) {
+          if (serving_time_start_minutes <= current_minutes) {
+            isOpenBusiness = true;
+            console.log("condition - 1");
+            continue;
+          }
+        }
+        if (current_hour === serving_time_end_hour) {
+          if (serving_time_end_minutes >= current_minutes) {
+            isOpenBusiness = true;
+            console.log("condition - 2");
+            continue;
+          }
+        } else {
+          isOpenBusiness = true;
+          console.log("condition - 3");
+          continue;
+        }
+      }
+    }
+    if (isOpenBusiness === true) {
+      console.log("condition - isOpenBusiness");
+      console.log("current serving time: " + serving_time_start_hour + serving_time_start_minutes + 
+      serving_time_end_hour + serving_time_end_minutes )
+      var day_period_start = "am";
+      var day_period_end = "am";
+      if ( serving_time_start_hour > 12 ){
+        serving_time_start_hour -= 12;
+        day_period_start = "pm";
+      }
+      if ( serving_time_end_hour > 12 ){
+        serving_time_end_hour -= 12;
+        day_period_end = "pm";
+      }
+      return (
+        <div className="serving_times raleway-semi-bold-black-17px">
+          Serving Time | <br />
+          {serving_time_start_hour}:{serving_time_start_minutes}
+          {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
+        </div>
+      );
+    }
+  };
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/api/restaurant/${restaurant_id_path}`)
+      // , { restaurant_id: restaurant_id_path }
+      .then(res => {
+        console.log("res.data: " + res.data);
+        setRestaurant(res.data);
+      })
+      .catch(err => {
+      });
+  }, [restaurant_id_path]);
+
+  useEffect(() => {
+    axios.post(`http://localhost:8000/api/restaurant_serving_times/search`, { restaurant_id })
+      .then(res => {
+        console.log("res.data2: " + res.data);
+        setRestaurantServingTimes(res.data);
+      })
+      .catch(err => {
+      });
+  }, [restaurant_id_path]);
 
 
   return (
@@ -61,13 +148,16 @@ const CustomerMeals = (props) => {
       <img className="scroll-group-1" src={scrollGroup1} />
       <div className="overlap-group5">
         <div className="rectanglecategory"></div>
-        <div className="categoryname raleway-semi-bold-black-23px">{categoryName}</div>
+        {getCurrentServingTimes()}
+        <div className="categoryname raleway-semi-bold-black-23px">
+          {categoryName}
+        </div>
       </div>
       <div className="overlap-group6">
         <div className="navbarfulllayout" style={{ backgroundImage: `url(${navBarFullLayout})` }}>
           <div className="restaurantaddress raleway-semi-bold-white-17px">
             <span className="span0">{spanText}</span>
-            <span className="span1">{restaurant.restaurant_name}</span>
+            <span className="span1">{restaurant.restaurant_name}, {restaurant.postcode}, {restaurant.city}, {restaurant.country} </span>
           </div>
           <div className="overlap-group-4">
             <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
@@ -76,10 +166,10 @@ const CustomerMeals = (props) => {
             <div className="category3 raleway-semi-bold-black-13px">{category3}</div>
             <div className="category4 raleway-semi-bold-black-13px">{category4}</div>
             <div className="category5 raleway-semi-bold-black-13px">{category5}</div>
-            <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>
+            <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>            
           </div>
+          <img className="lasermatelogo" src={laserMateLogo} />
         </div>
-        <img className="lasermatelogo" src={laserMateLogo} />
       </div>
     </div>
   );
@@ -97,7 +187,6 @@ function Overlapgroup1(props) {
   );
 }
 
-
 function Overlapgroup(props) {
   const { dishGreyBackground, dishImage } = props;
 
@@ -108,52 +197,53 @@ function Overlapgroup(props) {
     </div>
   );
 }
+
+
 const overlapgroup1Data = {
-    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
+  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
 };
 
 const overlapgroupData = {
-    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
+  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
 };
 
 const overlapgroup12Data = {
-    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
+  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
 };
 
 const overlapgroup2Data = {
-    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
+  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
 };
 
 const CustomerMealsData = {
-    textGoToPayment: "Go to Payment",
-    scrollGroup1: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/scroll-group-1@1x.png",
-    dishName: "Takoyaki Octopus",
-    dishPrice: "£4.20",
-    dishName2: "Takoyaki Octopus",
-    dishPrice2: "£4.20",
-    dishName3: "Takoyaki Octopus",
-    dishPrice3: "£4.20",
-    dishName4: "Takoyaki Octopus",
-    dishPrice4: "£4.20",
-    categoryName: "Starters",
-    navBarFullLayout: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/blue-nav-bar@1x.png",
-    spanText: "",
-    spanText2: "Esushi, Glasgow, UK",
-    text2: "<",
-    category1: "Alcohol",
-    category2: "Drinks ",
-    category3: "Ramen",
-    category4: "Sushi",
-    category5: "Dessert",
-    text1: ">",
-    laserMateLogo: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-16@1x.png",
-    overlapgroup1Props: overlapgroup1Data,
-    overlapgroupProps: overlapgroupData,
-    overlapgroup12Props: overlapgroup12Data,
-    overlapgroup2Props: overlapgroup2Data,
+  textGoToPayment: "Go to Payment",
+  scrollGroup1: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/scroll-group-1@1x.png",
+  dishName: "Takoyaki Octopus",
+  dishPrice: "£4.20",
+  dishName2: "Takoyaki Octopus",
+  dishPrice2: "£4.20",
+  dishName3: "Takoyaki Octopus",
+  dishPrice3: "£4.20",
+  dishName4: "Takoyaki Octopus",
+  dishPrice4: "£4.20",
+  categoryName: "Starters",
+  navBarFullLayout: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/blue-nav-bar@1x.png",
+  spanText: "",
+  spanText2: "Esushi, Glasgow, UK",
+  text2: "<",
+  category1: "Alcohol",
+  category2: "Drinks ",
+  category3: "Ramen",
+  category4: "Sushi",
+  category5: "Dessert",
+  text1: ">",
+  laserMateLogo: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-16@1x.png",
+  overlapgroup1Props: overlapgroup1Data,
+  overlapgroupProps: overlapgroupData,
+  overlapgroup12Props: overlapgroup12Data,
+  overlapgroup2Props: overlapgroup2Data,
 };
-

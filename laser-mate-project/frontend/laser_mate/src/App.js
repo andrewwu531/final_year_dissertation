@@ -14,10 +14,11 @@ import Figma_Examples from './containers/mobile_web/Figma_Examples';
 const App = () => (
     <Router>
         <Switch> 
-            <Route exact path='/restaurant/:restaurant_id' component={Meals} />
+            <Route exact path='/:restaurant_id/:table_number' component={Meals} />
             <Route exact path='/r-id/details' component={Meal} />
-            <Route exact path='/' component={Figma_Examples} />
-            <Route exact path='/:restaurant_id/1' component={Not_Found} />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/:restaurant_id' component={Figma_Examples} />
+            <Route component={Not_Found} />
         </Switch> 
     </Router>
 );

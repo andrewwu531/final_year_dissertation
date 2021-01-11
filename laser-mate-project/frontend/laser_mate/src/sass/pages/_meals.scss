@@ -124,6 +124,21 @@
   white-space: nowrap;
   width: auto;
 }
+//
+.customermeals .serving_times {
+  background-color: transparent;
+  height: auto;
+  left: 145px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  opacity: 0.9;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+  width: auto;
+}
+//
 .customermeals .dishframe {
   align-items: flex-end;
   background-color: transparent;
@@ -412,6 +427,7 @@
   color: white;
   font-family: "Raleway", Helvetica, Arial, serif;
   font-size: 17px;
+  font-style: normal;
 }
 :root {
   --radical-red: rgba(239, 71, 111, 1);
@@ -426,4 +442,28 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:600|Roboto:700");
+* {
+  box-sizing: border-box;
+}
+.raleway-semi-bold-black-17px {
+  color: black;
+  font-family: "Raleway", Helvetica, Arial, serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+}
+.serving_times {
+  background-color: transparent;
+  flex-shrink: 0;
+  height: auto;
+  letter-spacing: 0px;
+  line-height: 24px;
+  min-height: 22px;
+  min-width: 206px;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
 }
