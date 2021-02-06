@@ -13,7 +13,6 @@ import './sass/main.scss';
 const App = () => (
     <Router>
         <Switch> 
-            <Route exact path='/:restaurant_id/second' component={FirstPagev1} />
             <Route exact path='/:restaurant_id/:table_number' component={FirstPage} />
             <Route exact path='/' component={Home} />
             <Route component={Not_Found} />

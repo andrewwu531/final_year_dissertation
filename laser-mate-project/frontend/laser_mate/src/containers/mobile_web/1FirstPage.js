@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
-//import Restaurant_Serving_Time from '.../components/Restaurant_Serving_Time';
-
 
 function App() {
   return <CustomerMeals {...CustomerMealsData} />;
 }
 
-export default App; 
+export default App;
 
 
-const CustomerMeals = (props) => {
+function CustomerMeals(props) {
   const [restaurant, setRestaurant] = useState({});
   const [restaurantServingTimes, setRestaurantServingTimes] = useState({});
   const [currentRestaurantServingTime, setCurrentRestaurantServingTime] = useState({});
@@ -27,32 +25,46 @@ const CustomerMeals = (props) => {
   console.log('restaurant_id_path: ' + restaurant_id_path);
   console.log('table_number_path: ' + table_number_path);
   const {
-    textGoToPayment,
-    scrollGroup1,
+    payText,
+    help,
+    servingTimeIndicat,
+    categoryName,
+    dishGreyBackground,
+    dishImage,
     dishName,
     dishPrice,
+    dishGreyBackground2,
+    dishImage2,
     dishName2,
     dishPrice2,
+    ellipseWhite,
+    ellipseBlue,
+    dishGreyBackground3,
+    dishImage3,
     dishName3,
     dishPrice3,
+    dishGreyBackground4,
+    dishImage4,
     dishName4,
     dishPrice4,
-    categoryName,
+    ellipseWhite2,
+    ellipseBlue2,
     navBarFullLayout,
     spanText,
-    spanText2,
     text2,
-    category1,
+    drinks,
     category2,
     category3,
     category4,
     category5,
     text1,
     laserMateLogo,
-    overlapgroup1Props,
-    overlapgroupProps,
-    overlapgroup12Props,
-    overlapgroup2Props,
+    category52,
+    firstSwippingCategoryBar,
+    group2Props,
+    meal4Props,
+    meal42Props,
+    group22Props,
   } = props;
 
   useEffect(() => {
@@ -149,7 +161,6 @@ const CustomerMeals = (props) => {
       }
       return (
         <div className="serving_times raleway-semi-bold-black-17px">
-          Serving Time | <br />
           {serving_time_start_hour}:{serving_time_start_minutes}
           {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
         </div>
@@ -161,109 +172,238 @@ const CustomerMeals = (props) => {
 
 
   return (
-    <div className="customermeals animate-enter">
-      <div className="goto-payment-button">
-        <div className="textgotopayment raleway-semi-bold-white-15px">{textGoToPayment}</div>
+    <div className="mealsinterfacem1c1 animate-enter">
+      <div className="overlap-group1">
+        <div className="pay-button">
+          <div className="overlap-group2">
+            <div className="yellowrectangle"></div>
+            <div className="paytext roboto-medium-black-19px">{payText}</div>
+          </div>
+        </div>
+        <div className="help segoeui-bold-alizarin-crimson-20px">{help}</div>
       </div>
-      <img className="scroll-group-1" src={scrollGroup1} />
-      <div className="overlap-group5">
-        <div className="rectanglecategory"></div>
-        {computeCurrentRestaurantServingTime()}
-        <div className="categoryname raleway-semi-bold-black-23px">
-          {categoryName}
+      <div className="servingtimeindicat raleway-semi-bold-black-17px">{computeCurrentRestaurantServingTime()}</div>
+      <div className="categoryname raleway-semi-bold-black-23px">{categoryName}</div>
+      <div className="x0">
+        <div className="first-four-meals">
+          <div className="overlap-group-1">
+            <div className="rectangle-four-meals">
+              <div className="inner-rect-four-meals">
+                <div className="auto-flex">
+                  <div className="group-1">
+                    <div className="overlap-group-2">
+                      <img className="dishgreybackground" src={dishGreyBackground} />
+                      <img className="dishimage" src={dishImage} />
+                      <div className="dishname raleway-semi-bold-black-15px">{dishName}</div>
+                      <div className="dishprice raleway-semi-bold-black-15px">{dishPrice}</div>
+                    </div>
+                  </div>
+                  <div className="group-3">
+                    <div className="overlap-group-2">
+                      <img className="dishgreybackground" src={dishGreyBackground2} />
+                      <img className="dishimage" src={dishImage2} />
+                      <div className="dishname-3 raleway-semi-bold-black-15px">{dishName2}</div>
+                      <div className="dishprice raleway-semi-bold-black-15px">{dishPrice2}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="auto-flex1">
+                  <Group2
+                    dishGreyBackground={group2Props.dishGreyBackground}
+                    dishImage={group2Props.dishImage}
+                    dishName={group2Props.dishName}
+                    dishPrice={group2Props.dishPrice}
+                  />
+                  <Meal4
+                    dishGreyBackground={meal4Props.dishGreyBackground}
+                    dishImage={meal4Props.dishImage}
+                    dishName={meal4Props.dishName}
+                    dishPrice={meal4Props.dishPrice}
+                  />
+                </div>
+              </div>
+            </div>
+            <img className="ellipse-white" src={ellipseWhite} />
+            <img className="ellipse-blue" src={ellipseBlue} />
+          </div>
+        </div>
+        <div className="second-four-meals">
+          <div className="overlap-group-1">
+            <div className="rectangle-four-meals">
+              <div className="inner-rect-four-meals">
+                <div className="auto-flex">
+                  <div className="meal-1">
+                    <div className="overlap-group-2">
+                      <img className="dishgreybackground" src={dishGreyBackground3} />
+                      <img className="dishimage" src={dishImage3} />
+                      <div className="dishname-4 raleway-semi-bold-black-15px">{dishName3}</div>
+                      <div className="dishprice raleway-semi-bold-black-15px">{dishPrice3}</div>
+                    </div>
+                  </div>
+                  <Meal4
+                    dishGreyBackground={meal42Props.dishGreyBackground}
+                    dishImage={meal42Props.dishImage}
+                    dishName={meal42Props.dishName}
+                    dishPrice={meal42Props.dishPrice}
+                  />
+                </div>
+                <div className="auto-flex1">
+                  <Group2
+                    dishGreyBackground={group22Props.dishGreyBackground}
+                    dishImage={group22Props.dishImage}
+                    dishName={group22Props.dishName}
+                    dishPrice={group22Props.dishPrice}
+                  />
+                  <div className="meal-4">
+                    <div className="overlap-group-2">
+                      <img className="dishgreybackground" src={dishGreyBackground4} />
+                      <img className="dishimage" src={dishImage4} />
+                      <div className="dishname-5 raleway-semi-bold-black-15px">{dishName4}</div>
+                      <div className="dishprice raleway-semi-bold-black-15px">{dishPrice4}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img className="ellipse-white" src={ellipseWhite2} />
+            <img className="ellipse-blue" src={ellipseBlue2} />
+          </div>
         </div>
       </div>
-      <div className="overlap-group6">
-        <div className="navbarfulllayout" style={{ backgroundImage: `url(${navBarFullLayout})` }}>
-          <div className="restaurantaddress raleway-semi-bold-white-17px">
-            <span className="span0">{spanText}</span>
-            <span className="span1">{restaurant.restaurant_name}, {restaurant.postcode}, {restaurant.city}, {restaurant.country} </span>
+      <div className="overlap-group">
+        <div className="second-swi-teogry-bar">
+          <div className="overlap-group-3">
+            <div className="white-bar"></div>
+            <div className="nav-bar">
+              <div className="overlap-group-3">
+                <div className="navbarfulllayout" style={{ backgroundImage: `url(${navBarFullLayout})` }}>
+                  <div className="restaurantaddress raleway-semi-bold-white-17px">
+                    <span className="span0">{spanText}</span>
+                    <span className="span1">{restaurant.restaurant_name}, {restaurant.city}, {restaurant.postcode}, {restaurant.country}</span>
+                  </div>
+                  <div className="overlap-group5">
+                    <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
+                    <div className="drinks raleway-semi-bold-black-14px">{drinks}</div>
+                    <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
+                    <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
+                    <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
+                    <div className="category5 raleway-semi-bold-black-14px">{category5}</div>
+                    <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>
+                  </div>
+                </div>
+                <img className="lasermatelogo" src={laserMateLogo} />
+              </div>
+            </div>
           </div>
-          <div className="overlap-group-4">
-            <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
-            <div className="category1 raleway-semi-bold-black-13px">{category1}</div>
-            <div className="category2 raleway-semi-bold-black-13px">{category2}</div>
-            <div className="category3 raleway-semi-bold-black-13px">{category3}</div>
-            <div className="category4 raleway-semi-bold-black-13px">{category4}</div>
-            <div className="category5 raleway-semi-bold-black-13px">{category5}</div>
-            <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>            
+          <div className="overlap-group3">
+            <div className="category5-1 raleway-semi-bold-black-14px">{category52}</div>
           </div>
-          <img className="lasermatelogo" src={laserMateLogo} />
         </div>
+        <img className="first-swip-tegory-bar" src={firstSwippingCategoryBar} />
       </div>
     </div>
   );
 }
 
 
-function Overlapgroup1(props) {
-  const { dishGreyBackground, dishImage } = props;
+function Group2(props) {
+  const { dishGreyBackground, dishImage, dishName, dishPrice } = props;
 
   return (
-    <div className="overlap-group1">
-      <img className="dishgreybackground" src={dishGreyBackground} />
-      <img className="dishimage" src={dishImage} />
-    </div>
-  );
-}
-
-function Overlapgroup(props) {
-  const { dishGreyBackground, dishImage } = props;
-
-  return (
-    <div className="overlap-group">
-      <img className="dishgreybackground" src={dishGreyBackground} />
-      <img className="dishimage" src={dishImage} />
+    <div className="group-2">
+      <div className="overlap-group-2">
+        <img className="dishgreybackground" src={dishGreyBackground} />
+        <img className="dishimage" src={dishImage} />
+        <div className="dishname-1 raleway-semi-bold-black-15px">{dishName}</div>
+        <div className="dishprice raleway-semi-bold-black-15px">{dishPrice}</div>
+      </div>
     </div>
   );
 }
 
 
-const overlapgroup1Data = {
-  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+function Meal4(props) {
+  const { dishGreyBackground, dishImage, dishName, dishPrice } = props;
+
+  return (
+    <div className="meal-4">
+      <div className="overlap-group-2">
+        <img className="dishgreybackground" src={dishGreyBackground} />
+        <img className="dishimage" src={dishImage} />
+        <div className="dishname-2 raleway-semi-bold-black-15px">{dishName}</div>
+        <div className="dishprice raleway-semi-bold-black-15px">{dishPrice}</div>
+      </div>
+    </div>
+  );
+}
+const group2Data = {
+    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-1@1x.png",
+    dishName: "Crab Maki",
+    dishPrice: "£13.50",
 };
 
-const overlapgroupData = {
-  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+const meal4Data = {
+    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-3@1x.png",
+    dishName: "Duck Maki",
+    dishPrice: "£13.90",
 };
 
-const overlapgroup12Data = {
-  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+const meal42Data = {
+    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-6@1x.png",
+    dishName: "Tokyo Maki",
+    dishPrice: "£13.80",
 };
 
-const overlapgroup2Data = {
-  dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/path-1@1x.png",
-  dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-4@1x.png",
+const group22Data = {
+    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-5@1x.png",
+    dishName: "Golden Maki",
+    dishPrice: "£12.80",
 };
 
 const CustomerMealsData = {
-  textGoToPayment: "Go to Payment",
-  scrollGroup1: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/scroll-group-1@1x.png",
-  dishName: "Takoyaki Octopus",
-  dishPrice: "£4.20",
-  dishName2: "Takoyaki Octopus",
-  dishPrice2: "£4.20",
-  dishName3: "Takoyaki Octopus",
-  dishPrice3: "£4.20",
-  dishName4: "Takoyaki Octopus",
-  dishPrice4: "£4.20",
-  categoryName: "Starters",
-  navBarFullLayout: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8b65e0828f884ff28d424/img/blue-nav-bar@1x.png",
-  spanText: "",
-  spanText2: "Esushi, Glasgow, UK",
-  text2: "<",
-  category1: "Alcohol",
-  category2: "Drinks ",
-  category3: "Ramen",
-  category4: "Sushi",
-  category5: "Dessert",
-  text1: ">",
-  laserMateLogo: "https://anima-uploads.s3.amazonaws.com/projects/5ff8630ba446f0f86bcf17a3/releases/5ff8631af6a4ee3798a7cdc7/img/image-16@1x.png",
-  overlapgroup1Props: overlapgroup1Data,
-  overlapgroupProps: overlapgroupData,
-  overlapgroup12Props: overlapgroup12Data,
-  overlapgroup2Props: overlapgroup2Data,
+    payText: "Pay",
+    help: "Help",
+    servingTimeIndicat: "Serving Time: 5pm-12pm",
+    categoryName: "Maki",
+    dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image@1x.png",
+    dishName: "California Maki",
+    dishPrice: "£10.20",
+    dishGreyBackground2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-2@1x.png",
+    dishName2: "Dragon Maki",
+    dishPrice2: "£13.20",
+    ellipseWhite: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2@1x.png",
+    ellipseBlue: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2-1@1x.png",
+    dishGreyBackground3: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage3: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-4@1x.png",
+    dishName3: "Eel Maki",
+    dishPrice3: "£14.20",
+    dishGreyBackground4: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
+    dishImage4: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-7@1x.png",
+    dishName4: "Special Maki",
+    dishPrice4: "£14.20",
+    ellipseWhite2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2@1x.png",
+    ellipseBlue2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2-1@1x.png",
+    navBarFullLayout: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/blue-nav-bar@1x.png",
+    spanText: "",
+    text2: "<",
+    drinks: "Drinks",
+    category2: "Starters",
+    category3: "Handrolls",
+    category4: "Maki",
+    category5: "Donburi",
+    text1: ">",
+    laserMateLogo: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/5ffc7b98bfc97e62c2dcaffe/img/image-16@1x.png",
+    category52: "Vegetarian",
+    firstSwippingCategoryBar: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/first-swipping-category-bar-@1x.png",
+    group2Props: group2Data,
+    meal4Props: meal4Data,
+    meal42Props: meal42Data,
+    group22Props: group22Data,
 };
+
