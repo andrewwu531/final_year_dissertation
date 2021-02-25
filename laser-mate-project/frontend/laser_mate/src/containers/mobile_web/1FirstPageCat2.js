@@ -194,27 +194,16 @@ function CustomerMeals(props) {
       console.log("amazing: " + restaurantServingTimeCategories[i].category);
       categories.push(restaurantServingTimeCategories[i].category);
     }
-    if (categories.length < 6){
+    if (categories.length < 12){
       return(
         <div className="drinks raleway-semi-bold-black-14px">
-          {categories[0]} &nbsp; &nbsp; &nbsp;
-          {categories[1]} &nbsp; &nbsp; &nbsp;
-          {categories[2]} &nbsp; &nbsp; &nbsp;
-          {categories[3]} &nbsp; &nbsp; &nbsp;
-          {categories[4]} &nbsp; &nbsp; &nbsp;
+          {categories[5]} &nbsp; &nbsp; &nbsp;
+          {categories[6]} &nbsp; &nbsp; &nbsp;
+          {categories[7]} &nbsp; &nbsp; &nbsp;
+          {categories[8]} &nbsp; &nbsp; &nbsp;
+          {categories[9]} &nbsp; &nbsp; &nbsp;
         </div>
       );
-    } else if (categories.length < 12) {
-      return(
-        <div className="drinks raleway-semi-bold-black-14px">
-          {categories[0]} &nbsp; &nbsp; &nbsp;
-          {categories[1]} &nbsp; &nbsp; &nbsp;
-          {categories[2]} &nbsp; &nbsp; &nbsp;
-          {categories[3]} &nbsp; &nbsp; &nbsp;
-          {categories[4]} &nbsp; &nbsp; &nbsp;
-          <a href={ table_number_path + "/cat2"}> > </a>
-        </div>
-      )
     }
   };
 

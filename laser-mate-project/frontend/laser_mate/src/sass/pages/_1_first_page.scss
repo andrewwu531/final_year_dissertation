@@ -9,6 +9,9 @@
   opacity: 0;
   transform: scale(1.1);
 }
+.enter {
+  opacity: 1;
+}
 .mealsinterfacem1c1 {
   background-color: white;
   height: 680px;
@@ -172,9 +175,11 @@
   white-space: nowrap;
 }
 .mealsinterfacem1c1 .drinks {
+  display: flex;
+  overflow-x: auto;
   letter-spacing: 0px;
   line-height: 24px;
-  margin-left: 21px;
+  margin-left: 0px;
   margin-top: 0.5px;
   min-height: 18px;
   min-width: 44px;
@@ -386,13 +391,22 @@
   position: absolute;
   top: 0px;
 }
+.mealsinterfacem1c1 .servingtimeindicat1 {
+  left: 265px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  position: fixed;
+  text-align: center;
+  top: 112px;
+  white-space: nowrap;
+}
 .mealsinterfacem1c1 .servingtimeindicat {
   left: 250px;
   letter-spacing: 0px;
   line-height: 24px;
   position: fixed;
   text-align: center;
-  top: 120px;
+  top: 132px;
   white-space: nowrap;
 }
 .mealsinterfacem1c1 .span0 {
@@ -482,6 +496,13 @@
   color: black;
   font-family: "Raleway", Helvetica, Arial, serif;
   font-size: 23px;
+  font-style: normal;
+  font-weight: 600;
+}
+.raleway-semi-bold-black-25px {
+  color: black;
+  font-family: "Raleway", Helvetica, Arial, serif;
+  font-size: 25px;
   font-style: normal;
   font-weight: 600;
 }
