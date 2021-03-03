@@ -147,6 +147,7 @@
   top: 124px;
   white-space: nowrap;
 }
+
 .mealsinterfacem1c1 .dishname-4 {
   left: 9px;
   letter-spacing: 0px;
@@ -176,16 +177,19 @@
 }
 .mealsinterfacem1c1 .drinks {
   display: flex;
-  overflow-x: auto;
+  width: 100%;
   letter-spacing: 0px;
   line-height: 24px;
-  margin-left: 0px;
+  margin-left: -190px;
   margin-top: 0.5px;
   min-height: 18px;
   min-width: 44px;
   text-align: center;
   white-space: nowrap;
+  overflow-x: auto;
 }
+
+
 .mealsinterfacem1c1 .ellipse-blue {
   height: 11px;
   left: 165px;

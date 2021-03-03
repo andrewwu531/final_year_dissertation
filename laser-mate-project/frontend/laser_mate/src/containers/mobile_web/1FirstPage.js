@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router';
+import ScrollBar from '../../components/ScrollBar';
 
 function App() {
   return <CustomerMeals {...CustomerMealsData} />;
@@ -100,6 +101,18 @@ function CustomerMeals(props) {
   console.log("restaurantServingTimes string: " + JSON.stringify(restaurantServingTimes));
   console.log("restaurantServingTimes.length: " + restaurantServingTimes.length);
 
+  // const list = [
+  //   { name: 'item1' },
+  //   { name: 'item2' },
+  //   { name: 'item3' },
+  //   { name: 'item4' },
+  //   { name: 'item5' },
+  //   { name: 'item6' },
+  //   { name: 'item7' },
+  //   { name: 'item8' },
+  //   { name: 'item9' }
+  // ];
+
   for (let i = 0; i < restaurantServingTimes.length; i++) {
     console.log(i);
     var serving_time_start_hour = parseInt(restaurantServingTimes[i].serving_time_start_hour);
@@ -189,36 +202,17 @@ function CustomerMeals(props) {
   };
 
   const computeCurrentCategories = () => {
-    let categories = [];
+    let list = []
     for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
       console.log("amazing: " + restaurantServingTimeCategories[i].category);
-      categories.push(restaurantServingTimeCategories[i].category);
+//      categories.push(restaurantServingTimeCategories[i].category);
+      list.push({
+        cat: restaurantServingTimeCategories[i].category
+      })
     }
-    if (categories.length < 6){
-      return(
-        <div className="drinks raleway-semi-bold-black-14px">
-          {categories[0]} &nbsp; &nbsp; &nbsp;
-          {categories[1]} &nbsp; &nbsp; &nbsp;
-          {categories[2]} &nbsp; &nbsp; &nbsp;
-          {categories[3]} &nbsp; &nbsp; &nbsp;
-          {categories[4]} &nbsp; &nbsp; &nbsp;
-        </div>
-      );
-    } else if (categories.length < 12) {
-      return(
-        <div className="drinks raleway-semi-bold-black-14px">
-          {categories[0]} &nbsp; &nbsp; &nbsp;
-          {categories[1]} &nbsp; &nbsp; &nbsp;
-          {categories[2]} &nbsp; &nbsp; &nbsp;
-          {categories[3]} &nbsp; &nbsp; &nbsp;
-          {categories[4]} &nbsp; &nbsp; &nbsp;
-          <a href={ table_number_path + "/cat2"}> > </a>
-        </div>
-      )
-    }
-  };
-
-
+    console.log("qwert: " + list)
+  }
+  
   return (
     <div className="mealsinterfacem1c1 animate-enter">
       <div className="overlap-group1">
@@ -333,8 +327,8 @@ function CustomerMeals(props) {
                   <div className="overlap-group5">
                     <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
                     <div className="drinks raleway-semi-bold-black-14px"> {computeCurrentCategories()} </div>
-                    {/* <div className="drinks raleway-semi-bold-black-14px">{drinks}</div>
-                    <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
+                    <div className="drinks raleway-semi-bold-black-14px"> <ScrollBar></ScrollBar></div>
+                    {/* <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
                     <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
                     <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
                     <div className="category5 raleway-semi-bold-black-14px">{category5}</div> */}
@@ -354,7 +348,6 @@ function CustomerMeals(props) {
     </div>
   );
 }
-
 
 function Group2(props) {
   const { dishGreyBackground, dishImage, dishName, dishPrice } = props;
