@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
-import firstPage from '../containers/mobile_web/1FirstPage';
+import App from '../containers/mobile_web/1FirstPage';
+
 
 // list of items
-const list = [
-  { name: 'item1' },
-  { name: 'item2' },
-  { name: 'item3' },
-  { name: 'item4' },
-  { name: 'item5' },
-  { name: 'item6' },
-  { name: 'item7' },
-  { name: 'item8' },
-  { name: 'item9' }
-];
+// const list = [
+//   { name: 'item1' },
+//   { name: 'item2' },
+//   { name: 'item3' },
+//   { name: 'item4' },
+//   { name: 'item5' },
+//   { name: 'item6' },
+//   { name: 'item7' },
+//   { name: 'item8' },
+//   { name: 'item9' }
+// ];
 
 // One item component
 // selected prop will be passed
@@ -47,11 +48,13 @@ const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
 
 const selected = 'item1';
 
-class App extends Component {
+class AppScrollBar extends Component {
   constructor(props) {
     super(props);
+    console.log("props-");
+    console.log(props);
     // call it again if items count changes
-    this.menuItems = Menu(list, selected);
+    this.menuItems = Menu(props.categories, selected);
   }
 
   state = {
@@ -82,4 +85,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppScrollBar;

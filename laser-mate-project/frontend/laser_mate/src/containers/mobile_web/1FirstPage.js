@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, renderStatic } from 'react-helmet';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router';
@@ -11,11 +11,10 @@ function App() {
 
 export default App;
 
-
 function CustomerMeals(props) {
   const [restaurant, setRestaurant] = useState({});
   const [restaurantServingTimes, setRestaurantServingTimes] = useState({});
-  const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState({});
+  const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState([]);
 
   const location = useLocation()
   const full_path = location.pathname;
@@ -90,7 +89,7 @@ function CustomerMeals(props) {
       .catch(err => {
       });
   }, [restaurant_id_path]);
-  
+
   let result = [];
   var today = new Date();
   var isOpenBusiness = false;
@@ -100,18 +99,6 @@ function CustomerMeals(props) {
   console.log("restaurantServingTimes: " + restaurantServingTimes);
   console.log("restaurantServingTimes string: " + JSON.stringify(restaurantServingTimes));
   console.log("restaurantServingTimes.length: " + restaurantServingTimes.length);
-
-  // const list = [
-  //   { name: 'item1' },
-  //   { name: 'item2' },
-  //   { name: 'item3' },
-  //   { name: 'item4' },
-  //   { name: 'item5' },
-  //   { name: 'item6' },
-  //   { name: 'item7' },
-  //   { name: 'item8' },
-  //   { name: 'item9' }
-  // ];
 
   for (let i = 0; i < restaurantServingTimes.length; i++) {
     console.log(i);
@@ -154,65 +141,93 @@ function CustomerMeals(props) {
     axios.get(`http://localhost:8000/api/restaurant_serving_time_categories/${current_restaurant_serving_time_id}`)
       .then(res => {
         console.log("res.data3: " + res.data);
-        setRestaurantServingTimeCategories(res.data);
+        computeCurrentCategories(res.data);
+        //setRestaurantServingTimeCategories(res.data);
       })
       .catch(err => {
       });
   }, [current_restaurant_serving_time_id]);
 
-  const computeCurrentRestaurantServingTime = () => {
+  //const computeCurrentRestaurantServingTime = () => {
 
-    if (isOpenBusiness === true) {
-      console.log("condition - isOpenBusiness");
-      console.log("current serving time: " + serving_time_start_hour + serving_time_start_minutes +
-        serving_time_end_hour + serving_time_end_minutes)
-      var day_period_start = "am";
-      var day_period_end = "am";
-      if (serving_time_start_hour > 12) {
-        serving_time_start_hour -= 12;
-        day_period_start = "pm";
-      }
-      if (serving_time_start_hour === 12) {
-        day_period_start = "pm";
-      }
-      if (serving_time_end_hour > 12) {
-        serving_time_end_hour -= 12;
-        day_period_end = "pm";
-      }
-      if (serving_time_end_hour === 12) {
-        console.log("andrewwu");
-        day_period_end = "pm";
-      }
-      if (serving_time_start_minutes === 0) {
-        serving_time_start_minutes = "00";
-      }
-      if (serving_time_end_minutes === 0) {
-        serving_time_end_minutes = "00";
-      }
-
-      return (
-        <div className="serving_times raleway-semi-bold-black-15px">
-          {serving_time_start_hour}:{serving_time_start_minutes}
-          {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
-        </div>
-      );
-    } else {
-      console.log("---- condition ----- outside serving time");
+  if (isOpenBusiness === true) {
+    console.log("condition - isOpenBusiness");
+    console.log("current serving time: " + serving_time_start_hour + serving_time_start_minutes +
+      serving_time_end_hour + serving_time_end_minutes)
+    var day_period_start = "am";
+    var day_period_end = "am";
+    if (serving_time_start_hour > 12) {
+      serving_time_start_hour -= 12;
+      day_period_start = "pm";
     }
-  };
+    if (serving_time_start_hour === 12) {
+      day_period_start = "pm";
+    }
+    if (serving_time_end_hour > 12) {
+      serving_time_end_hour -= 12;
+      day_period_end = "pm";
+    }
+    if (serving_time_end_hour === 12) {
+      console.log("andrewwu");
+      day_period_end = "pm";
+    }
+    if (serving_time_start_minutes === 0) {
+      serving_time_start_minutes = "00";
+    }
+    if (serving_time_end_minutes === 0) {
+      serving_time_end_minutes = "00";
+    }
+
+    // return (
+    //   <div className="serving_times raleway-semi-bold-black-15px">
+    //     {serving_time_start_hour}:{serving_time_start_minutes}
+    //     {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
+    //   </div>
+    // );
+  } else {
+    console.log("---- condition ----- outside serving time");
+  }
+  //};
 
   const computeCurrentCategories = () => {
     let list = []
     for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
+
       console.log("amazing: " + restaurantServingTimeCategories[i].category);
-//      categories.push(restaurantServingTimeCategories[i].category);
       list.push({
-        cat: restaurantServingTimeCategories[i].category
-      })
+        name: restaurantServingTimeCategories[i].category
+      });
     }
-    console.log("qwert: " + list)
+
+    //setRestaurantServingTimeCategories(list); 
+    console.log("restaurantServingTimeCategories: dd ");
+    console.log(restaurantServingTimeCategories);
+    console.log(list);
+    return (
+      <div className="drinks raleway-semi-bold-black-14px">
+         abc
+        {restaurant.city}
+        <ScrollBar categories={restaurantServingTimeCategories}></ScrollBar>
+      </div>
+    );
   }
-  
+  //      categories.push(restaurantServingTimeCategories[i].category);
+  //   list.push({
+  //     cat: restaurantServingTimeCategories[i].category
+  //   })
+  // }
+  // console.log("qwert: " + list)
+
+  // return (
+  //   <div className="drinks raleway-semi-bold-black-14px">
+  //     {restaurantServingTimeCategories[].category}
+  //   </div>
+  // );
+  //   }
+  //   return list;  
+
+  // }
+
   return (
     <div className="mealsinterfacem1c1 animate-enter">
       <div className="overlap-group1">
@@ -225,7 +240,13 @@ function CustomerMeals(props) {
         <div className="help segoeui-bold-alizarin-crimson-20px">{help}</div>
       </div>
       <div className="servingtimeindicat1 raleway-semi-bold-black-15px">Serving Times:</div>
-      <div className="servingtimeindicat raleway-semi-bold-black-15px">{computeCurrentRestaurantServingTime()}</div>
+      <div className="servingtimeindicat raleway-semi-bold-black-15px">
+        <div className="serving_times raleway-semi-bold-black-15px">
+          {serving_time_start_hour}:{serving_time_start_minutes}
+          {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
+        </div>
+      </div>
+      {/* <div className="servingtimeindicat raleway-semi-bold-black-15px">{computeCurrentRestaurantServingTime()}</div> */}
       <div className="categoryname raleway-semi-bold-black-25px">{categoryName}</div>
       <div className="x0">
         <div className="first-four-meals">
@@ -326,12 +347,12 @@ function CustomerMeals(props) {
                   </div>
                   <div className="overlap-group5">
                     <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
-                    <div className="drinks raleway-semi-bold-black-14px"> {computeCurrentCategories()} </div>
-                    <div className="drinks raleway-semi-bold-black-14px"> <ScrollBar></ScrollBar></div>
+
+                    {computeCurrentCategories()}
                     {/* <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
-                    <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
-                    <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
-                    <div className="category5 raleway-semi-bold-black-14px">{category5}</div> */}
+                      <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
+                      <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
+                      <div className="category5 raleway-semi-bold-black-14px">{category5}</div> */}
                     <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>
                   </div>
                 </div>
@@ -347,6 +368,7 @@ function CustomerMeals(props) {
       </div>
     </div>
   );
+  
 }
 
 function Group2(props) {
