@@ -24,4 +24,4 @@ class Restaurant_Serving_Time_Category_Dishes(models.Model):
         verbose_name_plural = '4-1 Restaurant Serving Time Category Dishes'
 
     def __str__(self):
-        return '{}'.format(self.dish_id)
+        return '{}'.format(self.restaurant_serving_time_category_id)

@@ -10,6 +10,7 @@ function App() {
 }
 
 export default App;
+// http://localhost:8000/api/restaurant_serving_time_category_dishes/search
 
 function CustomerMeals(props) {
   const [restaurant, setRestaurant] = useState({});
@@ -141,14 +142,12 @@ function CustomerMeals(props) {
     axios.get(`http://localhost:8000/api/restaurant_serving_time_categories/${current_restaurant_serving_time_id}`)
       .then(res => {
         console.log("res.data3: " + res.data);
-        computeCurrentCategories(res.data);
-        //setRestaurantServingTimeCategories(res.data);
+        setRestaurantServingTimeCategories(res.data);
       })
       .catch(err => {
       });
   }, [current_restaurant_serving_time_id]);
 
-  //const computeCurrentRestaurantServingTime = () => {
 
   if (isOpenBusiness === true) {
     console.log("condition - isOpenBusiness");
@@ -177,56 +176,32 @@ function CustomerMeals(props) {
     if (serving_time_end_minutes === 0) {
       serving_time_end_minutes = "00";
     }
-
-    // return (
-    //   <div className="serving_times raleway-semi-bold-black-15px">
-    //     {serving_time_start_hour}:{serving_time_start_minutes}
-    //     {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
-    //   </div>
-    // );
   } else {
     console.log("---- condition ----- outside serving time");
   }
-  //};
 
   const computeCurrentCategories = () => {
     let list = []
     for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
 
-      console.log("amazing: " + restaurantServingTimeCategories[i].category);
-      list.push({
-        name: restaurantServingTimeCategories[i].category
-      });
-    }
-
-    //setRestaurantServingTimeCategories(list); 
-    console.log("restaurantServingTimeCategories: dd ");
-    console.log(restaurantServingTimeCategories);
+      console.log("amazing: " + restaurantServingTimeCategories[i].category);   
+      list.push(
+        restaurantServingTimeCategories[i].category
+      );
+    } 
     console.log(list);
     return (
       <div className="drinks raleway-semi-bold-black-14px">
-         abc
-        {restaurant.city}
-        <ScrollBar categories={restaurantServingTimeCategories}></ScrollBar>
+        {list[0]} &nbsp; &nbsp; 
+        {list[1]} &nbsp; &nbsp;
+        {list[2]} &nbsp; &nbsp; 
+        {list[3]} &nbsp; &nbsp;
+        {list[4]} &nbsp; &nbsp; 
+        {list[5]} &nbsp; &nbsp;
+
       </div>
     );
   }
-  //      categories.push(restaurantServingTimeCategories[i].category);
-  //   list.push({
-  //     cat: restaurantServingTimeCategories[i].category
-  //   })
-  // }
-  // console.log("qwert: " + list)
-
-  // return (
-  //   <div className="drinks raleway-semi-bold-black-14px">
-  //     {restaurantServingTimeCategories[].category}
-  //   </div>
-  // );
-  //   }
-  //   return list;  
-
-  // }
 
   return (
     <div className="mealsinterfacem1c1 animate-enter">
@@ -246,7 +221,6 @@ function CustomerMeals(props) {
           {day_period_start} - {serving_time_end_hour}:{serving_time_end_minutes}{day_period_end}
         </div>
       </div>
-      {/* <div className="servingtimeindicat raleway-semi-bold-black-15px">{computeCurrentRestaurantServingTime()}</div> */}
       <div className="categoryname raleway-semi-bold-black-25px">{categoryName}</div>
       <div className="x0">
         <div className="first-four-meals">
@@ -347,8 +321,7 @@ function CustomerMeals(props) {
                   </div>
                   <div className="overlap-group5">
                     <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
-
-                    {computeCurrentCategories()}
+                      {computeCurrentCategories()}
                     {/* <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
                       <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
                       <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
@@ -457,7 +430,6 @@ const CustomerMealsData = {
   navBarFullLayout: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/blue-nav-bar@1x.png",
   spanText: "",
   text2: "",
-  drinks: "Drinks",
   category2: "Starters",
   category3: "Handrolls",
   category4: "Maki",

@@ -4,8 +4,8 @@ from .views import Restaurant_View, Restaurant_QR_codes_View, Restaurant_PDF_Men
 
 urlpatterns = [
     path('<restaurant_id>', Restaurant_View.as_view()),
-    path('qr-codes', Restaurant_QR_codes_View.as_view()),
-    path('pdf-menus', Restaurant_PDF_Menus_View.as_view()),
+    # path('qr-codes', Restaurant_QR_codes_View.as_view()),
+    # path('pdf-menus', Restaurant_PDF_Menus_View.as_view()),
     #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),
 ]
 #path('owner/<slug:serving_time_hour>:<serving_time_minutes>', ITC_View().as_view()),
