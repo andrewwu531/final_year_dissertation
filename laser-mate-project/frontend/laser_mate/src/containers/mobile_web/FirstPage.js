@@ -187,11 +187,6 @@ function CustomerMeals(props) {
                                     </div>
                                     <div className="overlap-group5">
                                         <div className="text-2 raleway-semi-bold-black-13px">{text2}</div>
-
-                                        {/* <div className="category2 raleway-semi-bold-black-14px">{category2}</div>
-                          <div className="category3 raleway-semi-bold-black-14px">{category3}</div>
-                          <div className="category4 raleway-semi-bold-black-14px">{category4}</div>
-                          <div className="category5 raleway-semi-bold-black-14px">{category5}</div> */}
                                         <div className="text-1 raleway-semi-bold-black-13px">{text1}</div>
                                     </div>
                                 </div>

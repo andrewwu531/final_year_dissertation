@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Dishes from './Dishes';
 
 const Categories = (props) => {
 
+    let categories = []
+    let categories_id = []
 
     const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState([]);
     var current_restaurant_serving_time_id = props.current_restaurant_serving_time_id;
@@ -19,16 +22,24 @@ const Categories = (props) => {
 
     const computeCurrentCategories = () => {
         console.log(restaurantServingTimeCategories.length);
-        let categories = []
+
+        
+        console.log(categories_id);
+        console.log("hahey");
         for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
 
             console.log("amazing: " + restaurantServingTimeCategories[i].category);
+            categories_id.push(
+                restaurantServingTimeCategories[i].restaurant_serving_time_category_id
+            );
             categories.push(
                 restaurantServingTimeCategories[i].category
             );
         }
-        console.log("111111111111");
-        console.log(categories[1]);
+        console.log("222222222222222");
+        console.log(categories);
+        console.log(categories_id);
+        console.log(categories_id.length);
         return (
             <div className="overlap-group">
                 <div className="second-swi-teogry-bar">
@@ -39,11 +50,15 @@ const Categories = (props) => {
                                 <div className="navbarfulllayout">
                                     <div className="overlap-group5">
                                         <div className="drinks raleway-semi-bold-black-14px">
+                                                {categories_id.length > 0 && 
+                                                    <Dishes categories_id={categories_id}></Dishes>
+                                                }
                                                     {categories[0]} &nbsp; &nbsp; &nbsp;
                                                     {categories[1]} &nbsp; &nbsp; &nbsp;
                                                     {categories[2]} &nbsp; &nbsp; &nbsp;
                                                     {categories[3]} &nbsp; &nbsp; &nbsp;
                                                     {categories[4]} &nbsp; &nbsp; &nbsp;
+                                                    
                                         </div>
                                     </div>
                                     <img className="lasermatelogo" />

@@ -9,6 +9,7 @@ class Restaurant_Serving_Time_Category_Dish_View(APIView):
     serializer_class = Restaurant_Serving_Time_Category_Dishes_Serializer
 
     def post(self, request, format=None):
+        permission_classes = (permissions.AllowAny, )
         queryset = Restaurant_Serving_Time_Category_Dishes.objects.all()
         data = self.request.data
 
