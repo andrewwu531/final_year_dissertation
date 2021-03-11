@@ -51,7 +51,7 @@ const Categories = (props) => {
                                     <div className="overlap-group5">
                                         <div className="drinks raleway-semi-bold-black-14px">
                                                 {categories_id.length > 0 && 
-                                                    <Dishes categories_id={categories_id}></Dishes>
+                                                    <Dishes categories_id={categories_id} ></Dishes>
                                                 }
                                                     {categories[0]} &nbsp; &nbsp; &nbsp;
                                                     {categories[1]} &nbsp; &nbsp; &nbsp;

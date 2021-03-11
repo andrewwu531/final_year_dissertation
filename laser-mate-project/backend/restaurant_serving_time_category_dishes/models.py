@@ -9,7 +9,7 @@ Food_Labels = (
 class Restaurant_Serving_Time_Category_Dishes(models.Model):
     restaurant_serving_time_category_id = models.ForeignKey(Restaurant_Serving_Time_Categories, on_delete=models.CASCADE)
     dish_id = models.CharField(max_length=100, primary_key=True, unique=True)
-    dish_brief_descriptions = models.CharField(max_length=20)
+    dish_brief_descriptions = models.CharField(max_length=25)
     dish_price = models.CharField(max_length=9)
     dish_photo = models.FileField(upload_to='meal_photos/', default='-')
     dish_longer_descriptions = models.CharField(max_length=100)

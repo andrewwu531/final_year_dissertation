@@ -239,28 +239,28 @@ function Meal4(props) {
 const group2Data = {
     dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-1@1x.png",
-    dishName: "Crab Maki",
+    //dishName: "Crab Maki",
     dishPrice: "£13.50",
 };
 
 const meal4Data = {
     dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-3@1x.png",
-    dishName: "Duck Maki",
+    //dishName: "Duck Maki",
     dishPrice: "£13.90",
 };
 
 const meal42Data = {
     dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-6@1x.png",
-    dishName: "Tokyo Maki",
+    //dishName: "Tokyo Maki",
     dishPrice: "£13.80",
 };
 
 const group22Data = {
     dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-5@1x.png",
-    dishName: "Golden Maki",
+    //dishName: "Golden Maki",
     dishPrice: "£12.80",
 };
 
@@ -271,11 +271,11 @@ const CustomerMealsData = {
     categoryName: "Maki",
     dishGreyBackground: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image@1x.png",
-    dishName: "California Maki",
+    //dishName: "California Maki",
     dishPrice: "£10.20",
     dishGreyBackground2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png",
     dishImage2: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/dish-image-2@1x.png",
-    dishName2: "Dragon Maki",
+    //dishName2: "Dragon Maki",
     dishPrice2: "£13.20",
     ellipseWhite: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2@1x.png",
     ellipseBlue: "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/601c08108c1c1d1ca8ea032a/img/ellipse-2-1@1x.png",
