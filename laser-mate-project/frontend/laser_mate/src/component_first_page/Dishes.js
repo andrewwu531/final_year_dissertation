@@ -98,10 +98,11 @@ const Dishes = (props) => {
                 dishes_image.push(
                     <div key={i}>
                         <div className="dishname-3 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
-                        <div className="dishprice-4 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
+                        <div className="dishprice-4 raleway-semi-bold-black-15px">£{dishes[i].price} </div>
                         <img className="dishgreybackground-3" src={grey_image} />
                         <img className="dishimage-4" src={"http://localhost:8000" + dishes[i].photo}/>
                     </div>
+
                 );
             }
 

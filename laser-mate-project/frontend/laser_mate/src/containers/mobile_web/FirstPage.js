@@ -3,8 +3,8 @@ import { Helmet, renderStatic } from 'react-helmet';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router';
-import Restaurant from '../../components/Restaurant';
-import ServingTime from '../../components/Serving_Time';
+import Restaurant from '../../component_first_page/Restaurant';
+import ServingTime from '../../component_first_page/Serving_Time';
 
 
 function CustomerMeals() {

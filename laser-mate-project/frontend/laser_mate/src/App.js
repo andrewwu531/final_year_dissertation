@@ -1,10 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import FirstPage from './containers/mobile_web/FirstPage';
-import FirstPageCat2 from './containers/mobile_web/1FirstPageCat2';
 
 import Not_Found from './containers/mobile_web/5NotFound';
-import Order_Summary from './containers/mobile_web/OrderSummary';
 import Home from './containers/web/Home';
 import Contact_Us from './containers/web/Contact_Us';
 import './sass/main.scss';
@@ -14,8 +12,6 @@ const App = () => (
     <Router>
         <Switch> 
             <Route exact path='/:restaurant_id/:table_number' component={FirstPage} />
-            <Route exact path='/:restaurant_id/:table_number/cat2' component={FirstPageCat2} />
-            <Route exact path='/:restaurant_id/:table_number/order_summary' component={Order_Summary} />
             <Route exact path='/' component={Not_Found} />
             <Route component={Not_Found} />
         </Switch> 
