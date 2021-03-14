@@ -8,6 +8,7 @@ const Categories = (props) => {
     let categories_id = []
     const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState([]);
     var current_restaurant_serving_time_id = props.current_restaurant_serving_time_id;
+    
 
 
     useEffect(() => {
