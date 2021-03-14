@@ -1,72 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// function DishesApp() {
-//     return <Dishes {...CustomerMealsData} />;
-// }
-
-// export default DishesApp;
-
 const Dishes = (props) => {
 
-    let dishes_brief = []
 
-    const {
-        payText,
-        help,
-        servingTimeIndicat,
-        categoryName,
-        dishGreyBackground,
-        dishImage,
-        dishName,
-        dishPrice,
-        dishGreyBackground2,
-        dishImage2,
-        dishName2,
-        dishPrice2,
-        ellipseWhite,
-        ellipseBlue,
-        dishGreyBackground3,
-        dishImage3,
-        dishName3,
-        dishPrice3,
-        dishGreyBackground4,
-        dishImage4,
-        dishName4,
-        dishPrice4,
-        ellipseWhite2,
-        ellipseBlue2,
-        navBarFullLayout,
-        spanText,
-        text2,
-        drinks,
-        category2,
-        category3,
-        category4,
-        category5,
-        text1,
-        laserMateLogo,
-        category52,
-        firstSwippingCategoryBar,
-        group2Props,
-        meal4Props,
-        meal42Props,
-        group22Props,
-    } = props;
+    let dishes_image = []
+    let dishes = []
+    const grey_image = "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
+
 
     const [restaurantServingTimesCategorydishes, setRestaurantServingTimesCategorydishes] = useState({});
     var restaurant_serving_time_category_id = props.categories_id[0];
-    // props.categories_id[0];
 
 
     console.log("dish");
     console.log(restaurant_serving_time_category_id);
 
+
     useEffect(() => {
         console.log("again");
         console.log(restaurant_serving_time_category_id);
 
-        //restaurant_serving_time_category_id = restaurantServingTimeCategories[0].restaurant_serving_time_category_id;
         axios.post(`http://localhost:8000/api/restaurant_serving_time_category_dishes/search`, { restaurant_serving_time_category_id })
             .then(res => {
                 console.log("useEffect | dishes ---------- ");
@@ -77,24 +31,93 @@ const Dishes = (props) => {
             });
     }, [restaurant_serving_time_category_id]);
 
+
     const computeDishes = () => {
+
+
         console.log("computeDishes ");
         console.log(restaurantServingTimesCategorydishes.length);
+
+
         for (let i = 0; i < restaurantServingTimesCategorydishes.length; i++) {
 
-            console.log("wonderfulx: " + restaurantServingTimesCategorydishes[i].dish_brief_descriptions);
-            dishes_brief.push(
-                restaurantServingTimesCategorydishes[i].dish_brief_descriptions
-            );
+            console.log("wonderfulx: " + restaurantServingTimesCategorydishes[i].dish_photo); 
+            
+
+            dishes.push({
+                description: restaurantServingTimesCategorydishes[i].dish_brief_descriptions,
+                price: restaurantServingTimesCategorydishes[i].dish_price,
+                photo: restaurantServingTimesCategorydishes[i].dish_photo
+            });
         }
+    
+
+        for (let i = 0; i < dishes.length ; i++) {
+
+
+            if ( i == 0 ){
+                dishes_image.push(
+                    <div key={i}>
+                        <div className="dishname raleway-semi-bold-black-15px"> {dishes[i].description}</div>
+                        <div className="dishprice-1 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
+                        <img className="dishgreybackground-1" src={grey_image} />
+                        <img className="dishimage-1" src={"http://localhost:8000" + dishes[i].photo}/>
+                    </div>
+                );
+            }
+
+
+            else if ( i == 1 ){
+                console.log( " I am hard working");
+                dishes_image.push(
+                    <div key={i}>
+                        <div className="dishname-1 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
+                        <div className="dishprice-2 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
+                        <img className="dishgreybackground-2" src={grey_image} />
+                        <img className="dishimage-2" src={"http://localhost:8000" + dishes[i].photo}/>
+                    </div>
+                );
+            }
+
+
+            else if ( i == 2 ){
+                console.log( " I am hard working");
+                dishes_image.push(
+                    <div key={i}>
+                        <div className="dishname-2 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
+                        <div className="dishprice-3 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
+                        <img className="dishgreybackground-4" src={grey_image} />
+                        <img className="dishimage-3" src={"http://localhost:8000" + dishes[i].photo}/>
+                    </div>
+                );
+            }
+
+
+            else if ( i == 3 ){
+                console.log( " I am handsome");
+                dishes_image.push(
+                    <div key={i}>
+                        <div className="dishname-3 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
+                        <div className="dishprice-4 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
+                        <img className="dishgreybackground-3" src={grey_image} />
+                        <img className="dishimage-4" src={"http://localhost:8000" + dishes[i].photo}/>
+                    </div>
+                );
+            }
+
+
+            if ( i == 4 ) {
+                break;
+            }
+        }
+
         console.log("333333333333333333");
-        console.log(dishes_brief);
+        
+        
 
         return (
             <div>
-                <div className="dishname raleway-semi-bold-black-15px"> {dishes_brief[0]}</div>
-                <div className="dishname-1 raleway-semi-bold-black-15px">{dishes_brief[1]}</div>
-                <div className="dishname-2 raleway-semi-bold-black-15px">{dishes_brief[2]}</div>
+                {dishes_image}
             </div>
 
         );

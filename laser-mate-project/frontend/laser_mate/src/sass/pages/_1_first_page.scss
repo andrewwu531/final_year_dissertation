@@ -103,12 +103,76 @@
   top: 70px;
   width: 154px;
 }
+.mealsinterfacem1c1 .dishgreybackground-1 {
+  z-index: -1;
+  height: 108px;
+  left: 45px;
+  position: absolute;
+  top: 250px;
+  width: 154px;
+}
+.mealsinterfacem1c1 .dishgreybackground-2 {
+  z-index: -1;
+  height: 108px;
+  left: 218px;
+  position: absolute;
+  top: 250px;
+  width: 154px;
+}
+.mealsinterfacem1c1 .dishgreybackground-3 {
+  z-index: -1;
+  height: 108px;
+  left: 218px;
+  position: absolute;
+  top: 450px;
+  width: 154px;
+}
+.mealsinterfacem1c1 .dishgreybackground-4 {
+  z-index: -1;
+  height: 108px;
+  left: 45px;
+  position: absolute;
+  top: 450px;
+  width: 154px;
+}
 .mealsinterfacem1c1 .dishimage {
   border-radius: 120px;
   height: 114px;
   left: 14px;
   position: absolute;
   top: 0px;
+  width: 126px;
+}
+.mealsinterfacem1c1 .dishimage-1 {
+  border-radius: 120px;
+  height: 114px;
+  left: 57px;
+  position: absolute;
+  top: 180px;
+  width: 126px;
+}
+.mealsinterfacem1c1 .dishimage-2 {
+  border-radius: 120px;
+  height: 114px;
+  left: 232px;
+  position: absolute;
+  top: 180px;
+  width: 126px;
+}
+.mealsinterfacem1c1 .dishimage-3 {
+  border-radius: 120px;
+  height: 114px;
+  left: 57px;
+  position: absolute;
+  top: 380px;
+  width: 126px;
+}
+.mealsinterfacem1c1 .dishimage-4 {
+  border-radius: 120px;
+  height: 114px;
+  left: 232px;
+  position: absolute;
+  top: 380px;
   width: 126px;
 }
 .mealsinterfacem1c1 .dishname {
@@ -119,7 +183,43 @@
   text-align: center;
   top: 122px;
   white-space: nowrap;
-}
+} 
+.mealsinterfacem1c1 .dishprice-1 {
+  left: 60px;
+  letter-spacing: 0px;
+  line-height: 430px;
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  white-space: nowrap;
+} 
+.mealsinterfacem1c1 .dishprice-2 {
+  left: 232px;
+  letter-spacing: 0px;
+  line-height: 430px;
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  white-space: nowrap;
+} 
+.mealsinterfacem1c1 .dishprice-3 {
+  left: 60px;
+  letter-spacing: 0px;
+  line-height: 827px;
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  white-space: nowrap;
+} 
+.mealsinterfacem1c1 .dishprice-4 {
+  left: 232px;
+  letter-spacing: 0px;
+  line-height: 827px;
+  position: absolute;
+  text-align: center;
+  top: 122px;
+  white-space: nowrap;
+} 
 .mealsinterfacem1c1 .dishname-1 {
   left: 225px;
   letter-spacing: 0px;
@@ -139,9 +239,9 @@
   white-space: nowrap;
 }
 .mealsinterfacem1c1 .dishname-3 {
-  left: 7px;
+  left: 225px;
   letter-spacing: 0px;
-  line-height: 24px;
+  line-height: 780px;
   position: absolute;
   text-align: center;
   top: 124px;

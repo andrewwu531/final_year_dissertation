@@ -6,9 +6,9 @@ const Categories = (props) => {
 
     let categories = []
     let categories_id = []
-
     const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState([]);
     var current_restaurant_serving_time_id = props.current_restaurant_serving_time_id;
+
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/restaurant_serving_time_categories/${current_restaurant_serving_time_id}`)
@@ -20,10 +20,9 @@ const Categories = (props) => {
             });
     }, [current_restaurant_serving_time_id]);
 
+
     const computeCurrentCategories = () => {
         console.log(restaurantServingTimeCategories.length);
-
-        
         console.log(categories_id);
         console.log("hahey");
         for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
@@ -36,10 +35,13 @@ const Categories = (props) => {
                 restaurantServingTimeCategories[i].category
             );
         }
+
+
         console.log("222222222222222");
         console.log(categories);
         console.log(categories_id);
         console.log(categories_id.length);
+        
         return (
             <div className="overlap-group">
                 <div className="second-swi-teogry-bar">
