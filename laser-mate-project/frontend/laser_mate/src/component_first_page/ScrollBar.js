@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
-import App from '../containers/mobile_web/1FirstPage';
+//import App from '../containers/mobile_web/1FirstPage';
 
 
 // list of items
@@ -10,7 +10,7 @@ import App from '../containers/mobile_web/1FirstPage';
 //   { name: 'item3' },
 //   { name: 'item4' },
 //   { name: 'item5' },
-//   { name: 'item6' },
+//   { name: 'item6' }, 
 //   { name: 'item7' },
 //   { name: 'item8' },
 //   { name: 'item9' }
@@ -28,23 +28,11 @@ const MenuItem = ({text, selected}) => {
 // Important! add unique key
 export const Menu = (list, selected) =>
   list.map(el => {
-    const {name} = el;
+    var {i} = el;
 
-    return <MenuItem text={name} key={name} selected={selected} />;
+    return <MenuItem text={i} key={i} selected={selected} />;
   });
 
-
-const Arrow = ({ text, className }) => {
-  return (
-    <div
-      className={className}
-    >{text}</div>
-  );
-};
-
-
-const ArrowLeft = Arrow({ text: '<', className: 'arrow-prev' });
-const ArrowRight = Arrow({ text: '>', className: 'arrow-next' });
 
 const selected = 'item1';
 
@@ -75,8 +63,6 @@ class AppScrollBar extends Component {
       <div className="App">
         <ScrollMenu
           data={menu}
-          arrowLeft={ArrowLeft}
-          arrowRight={ArrowRight}
           selected={selected}
           onSelect={this.onSelect}
         />

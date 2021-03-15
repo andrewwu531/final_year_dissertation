@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Dishes from './Dishes';
+import ScrollBar from '../component_first_page/ScrollBar';
 
 const Categories = (props) => {
 
@@ -23,6 +24,7 @@ const Categories = (props) => {
 
 
     const computeCurrentCategories = () => {
+        
         console.log(restaurantServingTimeCategories.length);
         console.log(categories_id);
         console.log("hahey");
@@ -32,9 +34,9 @@ const Categories = (props) => {
             categories_id.push(
                 restaurantServingTimeCategories[i].restaurant_serving_time_category_id
             );
-            categories.push(
-                restaurantServingTimeCategories[i].category
-            );
+            categories.push({
+                i: restaurantServingTimeCategories[i].category
+            });
         }
 
 
@@ -42,6 +44,7 @@ const Categories = (props) => {
         console.log(categories);
         console.log(categories_id);
         console.log(categories_id.length);
+
         
         return (
             <div className="overlap-group">
@@ -53,15 +56,13 @@ const Categories = (props) => {
                                 <div className="navbarfulllayout">
                                     <div className="overlap-group5">
                                         <div className="drinks raleway-semi-bold-black-14px">
+                                                {categories.length > 0 &&
+                                                    <ScrollBar categories={categories}></ScrollBar>
+                                                } 
                                                 {categories_id.length > 0 && 
                                                     <Dishes categories_id={categories_id} ></Dishes>
                                                 }
-                                                    {categories[0]} &nbsp; &nbsp; &nbsp;
-                                                    {categories[1]} &nbsp; &nbsp; &nbsp;
-                                                    {categories[2]} &nbsp; &nbsp; &nbsp;
-                                                    {categories[3]} &nbsp; &nbsp; &nbsp;
-                                                    {categories[4]} &nbsp; &nbsp; &nbsp;
-                                                    
+                                                
                                         </div>
                                     </div>
                                     <img className="lasermatelogo" />
@@ -79,7 +80,10 @@ const Categories = (props) => {
 
     }
     return (
-        <div>{computeCurrentCategories()}</div>
+        <div>  
+            {computeCurrentCategories()}
+            
+        </div> 
     );
 
 }

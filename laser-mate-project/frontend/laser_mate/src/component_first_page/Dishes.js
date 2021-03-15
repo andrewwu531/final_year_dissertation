@@ -6,6 +6,7 @@ const Dishes = (props) => {
 
     let dishes_image = []
     let dishes = []
+    const url = "http://localhost:8000";
     const grey_image = "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
 
 
@@ -61,7 +62,7 @@ const Dishes = (props) => {
                         <div className="dishname raleway-semi-bold-black-15px"> {dishes[i].description}</div>
                         <div className="dishprice-1 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
                         <img className="dishgreybackground-1" src={grey_image} />
-                        <img className="dishimage-1" src={"http://localhost:8000" + dishes[i].photo}/>
+                        <img className="dishimage-1" src={ url + dishes[i].photo}/>
                     </div>
                 );
             }
@@ -74,7 +75,7 @@ const Dishes = (props) => {
                         <div className="dishname-1 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
                         <div className="dishprice-2 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
                         <img className="dishgreybackground-2" src={grey_image} />
-                        <img className="dishimage-2" src={"http://localhost:8000" + dishes[i].photo}/>
+                        <img className="dishimage-2" src={url + dishes[i].photo}/>
                     </div>
                 );
             }
@@ -113,6 +114,7 @@ const Dishes = (props) => {
         }
 
         console.log("333333333333333333");
+        console.log(dishes_image)
         
         
 
