@@ -14,8 +14,11 @@ const Dishes = (props) => {
     var restaurant_serving_time_category_id = props.categories_id[0];
 
 
-    console.log("dish");
+    console.log("dishdish");
     console.log(restaurant_serving_time_category_id);
+
+    console.log(props);
+
 
 
     useEffect(() => {

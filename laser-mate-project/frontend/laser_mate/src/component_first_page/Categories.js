@@ -3,50 +3,62 @@ import axios from 'axios';
 import Dishes from './Dishes';
 import ScrollBar from '../component_first_page/ScrollBar';
 
-const Categories = (props) => {
+const Categories = ({
+    current_restaurant_serving_time_id
+}) => {
 
-    let categories = []
-    let categories_id = []
-    const [restaurantServingTimeCategories, setRestaurantServingTimeCategories] = useState([]);
-    var current_restaurant_serving_time_id = props.current_restaurant_serving_time_id;
+    const [selectedCategory, setSelectedCategory] = useState();
+    const [categories, setCategories] = useState([]);
+    const [categories_id, setCategories_id] = useState([]);
+    const [all_categories_id, setAll_categories_id] = useState([]);
+
+
+
+    const handleCategorySelect = (id) => {
+
+
+        const catObj = categories.find(c =>  c.i == id);
+
+        if (catObj && catObj.cat_id) {
+
+            const catIds = all_categories_id.filter(i => i == catObj.cat_id)
+            setCategories_id(catIds);
+        
+        }
+        
+        setSelectedCategory(id);
+    }
     
-
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/restaurant_serving_time_categories/${current_restaurant_serving_time_id}`)
             .then(res => {
                 console.log("useEffect | Categories ---------- " + res.data);
-                setRestaurantServingTimeCategories(res.data);
+                computeCurrentCategories(res.data);
             })
             .catch(err => {
             });
     }, [current_restaurant_serving_time_id]);
 
 
-    const computeCurrentCategories = () => {
+    const computeCurrentCategories = (data) => {
+
+        const cats = data.map(i => ({
+            i: i.category,
+            cat_id: i.restaurant_serving_time_category_id
+        }));
+
+        const catIds = data.map(i => 
+            i.restaurant_serving_time_category_id
+        );
+
+        setCategories(cats);
+        setCategories_id(catIds);
+        setAll_categories_id(catIds);
+    }
         
-        console.log(restaurantServingTimeCategories.length);
-        console.log(categories_id);
-        console.log("hahey");
-        for (let i = 0; i < restaurantServingTimeCategories.length; i++) {
-
-            console.log("amazing: " + restaurantServingTimeCategories[i].category);
-            categories_id.push(
-                restaurantServingTimeCategories[i].restaurant_serving_time_category_id
-            );
-            categories.push({
-                i: restaurantServingTimeCategories[i].category
-            });
-        }
-
-
-        console.log("222222222222222");
-        console.log(categories);
-        console.log(categories_id);
-        console.log(categories_id.length);
-
-        
-        return (
+    return (
+        <div>  
             <div className="overlap-group">
                 <div className="second-swi-teogry-bar">
                     <div className="overlap-group-3">
@@ -57,7 +69,11 @@ const Categories = (props) => {
                                     <div className="overlap-group5">
                                         <div className="drinks raleway-semi-bold-black-14px">
                                                 {categories.length > 0 &&
-                                                    <ScrollBar categories={categories}></ScrollBar>
+                                                    <ScrollBar categories={categories}
+                                                               selectedCategory={selectedCategory}
+                                                               selected_categories_id={categories_id[0]}
+                                                               onSelectItem={handleCategorySelect}
+                                                    ></ScrollBar>
                                                 } 
                                                 {categories_id.length > 0 && 
                                                     <Dishes categories_id={categories_id} ></Dishes>
@@ -75,13 +91,6 @@ const Categories = (props) => {
 
                 </div>
             </div>
-
-        );
-
-    }
-    return (
-        <div>  
-            {computeCurrentCategories()}
             
         </div> 
     );
