@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 .animate-enter {
   animation: animate-enter-frames 1s ease 0.5s 1 normal forwards;
   display: block;
@@ -12,626 +13,121 @@
 .enter {
   opacity: 1;
 }
-.mealsinterfacem1c1 {
-  background-color: white;
-  height: 680px;
-  overflow: hidden;
-  position: relative;
-  width: 414px;
-  opacity: 0;
-  transform: scale(1.1);
-}
-.mealsinterfacem1c1 .auto-flex {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -0px;
-  min-height: 375px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .auto-flex1 {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -0px;
-  margin-left: 17px;
-  min-height: 375px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .category2 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 26px;
-  margin-top: 0.5px;
-  min-height: 18px;
-  min-width: 54px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .category3 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 14px;
-  margin-top: 0.5px;
-  min-height: 18px;
-  min-width: 66px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .category4 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 19px;
-  margin-top: 0.5px;
-  min-height: 18px;
-  min-width: 34px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .category5 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 25px;
-  margin-top: 0.5px;
-  min-height: 18px;
-  min-width: 54px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .category5-1 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  min-height: 18px;
-  min-width: 74px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .categoryname {
-  left: 32px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  opacity: 0.8;
-  position: absolute;
-  text-align: center;
-  top: 120px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .dishgreybackground {
-  height: 108px;
-  left: 0px;
-  position: absolute;
-  top: 70px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .dishgreybackground-1 {
-  z-index: -1;
-  height: 108px;
-  left: 45px;
-  position: absolute;
-  top: 250px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .dishgreybackground-2 {
-  z-index: -1;
-  height: 108px;
-  left: 218px;
-  position: absolute;
-  top: 250px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .dishgreybackground-3 {
-  z-index: -1;
-  height: 108px;
-  left: 218px;
-  position: absolute;
-  top: 450px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .dishgreybackground-4 {
-  z-index: -1;
-  height: 108px;
-  left: 45px;
-  position: absolute;
-  top: 450px;
-  width: 154px;
-}
-.mealsinterfacem1c1 .dishimage {
-  border-radius: 120px;
-  height: 114px;
-  left: 14px;
-  position: absolute;
-  top: 0px;
-  width: 126px;
-}
-.mealsinterfacem1c1 .dishimage-1 {
-  border-radius: 120px;
-  height: 114px;
-  left: 57px;
-  position: absolute;
-  top: 180px;
-  width: 126px;
-}
-.mealsinterfacem1c1 .dishimage-2 {
-  border-radius: 120px;
-  height: 114px;
-  left: 232px;
-  position: absolute;
-  top: 180px;
-  width: 126px;
-}
-.mealsinterfacem1c1 .dishimage-3 {
-  border-radius: 120px;
-  height: 114px;
-  left: 57px;
-  position: absolute;
-  top: 380px;
-  width: 126px;
-}
-.mealsinterfacem1c1 .dishimage-4 {
-  border-radius: 120px;
-  height: 114px;
-  left: 232px;
-  position: absolute;
-  top: 380px;
-  width: 126px;
-}
-.mealsinterfacem1c1 .dishname {
-  left: 53px;
-  letter-spacing: 0px;
-  line-height: 390px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-} 
-.mealsinterfacem1c1 .dishprice-1 {
-  left: 60px;
-  letter-spacing: 0px;
-  line-height: 430px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-} 
-.mealsinterfacem1c1 .dishprice-2 {
-  left: 232px;
-  letter-spacing: 0px;
-  line-height: 430px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-} 
-.mealsinterfacem1c1 .dishprice-3 {
-  left: 60px;
-  letter-spacing: 0px;
-  line-height: 827px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-} 
-.mealsinterfacem1c1 .dishprice-4 {
-  left: 232px;
-  letter-spacing: 0px;
-  line-height: 827px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-} 
-.mealsinterfacem1c1 .dishname-1 {
-  left: 225px;
-  letter-spacing: 0px;
-  line-height: 390px;
-  position: absolute;
-  text-align: center;
-  top: 123px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .dishname-2 {
-  left: 53px;
-  letter-spacing: 0px;
-  line-height: 780px;
-  position: absolute;
-  text-align: center;
-  top: 124px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .dishname-3 {
-  left: 225px;
-  letter-spacing: 0px;
-  line-height: 780px;
-  position: absolute;
-  text-align: center;
-  top: 124px;
-  white-space: nowrap;
-}
 
-.mealsinterfacem1c1 .dishname-4 {
-  left: 9px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-  top: 122px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .dishname-5 {
-  left: 10px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-  top: 124px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .dishprice {
-  left: 10px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-  top: 144px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .drinks {
-  z-index: 10;
-  display: flex;
-  width: 100%;
-  letter-spacing: 0px;
-  line-height: 57px;
-  margin-left: 10px;
-  margin-top: 0.5px;
-  min-height: 18px;
-  min-width: 44px;
-  text-align: center;
-  white-space: nowrap;
-}
+.header {
+  background-color: #242D48;
+  height: 87px;
 
-
-.mealsinterfacem1c1 .ellipse-blue {
-  height: 11px;
-  left: 165px;
+  .top {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    img {
+      height: 45px;
+      width: 45px;
+    }
+    div {
+      text-align: center;
+      padding-right: 15px;
+      flex: 1 1 auto;
+      color: rgba(255, 255, 255, 1);
+      font-family: "Raleway", Helvetica;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0.85;
+      height: 4px;
+    }
+  }
+  .scroll {
+    padding: 0 10px;
+    background-color: #fff;
+    .menu-item {
+      padding: 9px 10px;
+      color: black;
+      font-family: "Raleway", Helvetica;
+      font-size: 12.5px;
+      font-style: normal;
+      font-weight: 600;
+      opacity: 0.90;
+    }
+  }
+}
+.category_display{
+  margin-top: -35px;
   position: absolute;
-  top: 419px;
-  width: 11px;
+  right: 300px;
+  font-family: "Raleway", Helvetica;
+  font-size: 10px;
+  margin: 10px;
 }
-.mealsinterfacem1c1 .ellipse-white {
-  height: 11px;
-  left: 185px;
-  position: absolute;
-  top: 419px;
-  width: 11px;
-}
-.mealsinterfacem1c1 .first-four-meals {
-  align-items: flex-start;
+.title {
   display: flex;
-  min-width: 355px;
-}
-.mealsinterfacem1c1 .first-swip-tegory-bar {
-  height: 0px;
-  left: 26px;
-  position: absolute;
-  top: 77px;
-  width: 360px;
-}
-.mealsinterfacem1c1 .group-1 {
-  align-items: flex-start;
-  display: flex;
-  min-width: 154px;
-}
-.mealsinterfacem1c1 .group-2 {
-  align-items: flex-start;
-  display: flex;
-  min-width: 154px;
-}
-.mealsinterfacem1c1 .group-3 {
-  align-items: flex-start;
-  display: flex;
-  margin-top: 20px;
-  min-width: 154px;
-}
-.mealsinterfacem1c1 .help {
-  left: 357px;
-  letter-spacing: 0px;
-  line-height: 20px;
-  position: absolute;
-  text-align: left;
-  top: 28px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .inner-rect-four-meals {
-  align-items: flex-end;
-  display: flex;
-  height: 375px;
-  min-width: 325px;
-}
-.mealsinterfacem1c1 .lasermatelogo {
-  height: 45px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 46px;
-}
-.mealsinterfacem1c1 .meal-1 {
-  align-items: flex-start;
-  display: flex;
-  min-width: 154px;
-}
-.mealsinterfacem1c1 .meal-4 {
-  align-items: flex-start;
-  display: flex;
-  margin-top: 20px;
-  min-width: 154px;
-}
-.mealsinterfacem1c1 .nav-bar {
-  align-items: flex-start;
-  display: flex;
-  height: 94px;
-  left: 0px;
-  min-width: 414px;
-  position: absolute;
-  top: 0px;
-}
-.mealsinterfacem1c1 .navbarfulllayout {
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
   align-items: center;
-  background-size: 100% 100%;
+  h1 {
+    font-size: 22px;
+  }
+}
+.dishes {
   display: flex;
-  flex-direction: column;
-  left: 0px;
-  min-height: 94px;
-  padding: 14.5px 0;
-  position: absolute;
-  top: 0px;
-  width: 414px;
+  flex-wrap: wrap;
+  .item {
+    // todo
+    width: 45%;
+    // margin: 0px;
+    // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    img {
+      &.img {
+        border-radius: 120px;
+        height: 114px;
+        width: 126px;
+        margin-top: 40px;
+        margin-left: 35px;
+    }
+    &.grey-image {
+      bottom: 0;
+      width: 90%;
+      z-index: -1;
+      margin-top: -50px;
+      margin-left: 35px;
+      display: inline-block;
+      
+      top: 100px;
+      margin-bottom: 50px;
+    }}
+    .dish-descriptions {
+      color: black;
+      font-family: "Raleway", Helvetica;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.9;
+      z-index: 1; 
+      margin-top: -90px;
+      margin-left: 80px;
+      width: 100%;
+      text-align: left;
+
+    }
+    .dish-price {
+      margin: 3px 0;
+      color: black;
+      font-family: "Raleway", Helvetica;
+      font-size: 13px;
+      font-weight: 600;
+      margin-right: 40px;
+      opacity: 0.85;
+      z-index: 1; 
+    }
+  }
 }
-.mealsinterfacem1c1 .overlap-group {
-  height: 94px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 813px;
-}
-.mealsinterfacem1c1 .overlap-group-1 {
-  height: 439px;
-  position: relative;
-  width: 355px;
-}
-.mealsinterfacem1c1 .overlap-group-2 {
-  height: 177px;
-  position: relative;
-  width: 154px;
-}
-.mealsinterfacem1c1 .overlap-group-3 {
-  height: 94px;
-  position: relative;
-  width: 414px;
-}
-.mealsinterfacem1c1 .overlap-group1 {
-  height: 61px;
-  left: 0px;
-  position: absolute;
-  top: 619px;
-  width: 414px;
-}
-.mealsinterfacem1c1 .overlap-group2 {
-  height: 61px;
-  position: relative;
-  width: 414px;
-}
-.mealsinterfacem1c1 .overlap-group3 {
-  align-items: flex-start;
-  background-color: white;
-  display: flex;
-  height: 31px;
-  margin-left: 40px;
-  margin-top: 31px;
-  min-width: 359px;
-  padding: 4px 16px;
-}
-.mealsinterfacem1c1 .overlap-group5 {
-  align-items: flex-start;
-  background-color: white;
-  display: flex;
-  height: 33px;
-  margin-top: 14px;
-  min-width: 414px;
-  padding: 3.5px 14px;
-}
-.mealsinterfacem1c1 .pay-button {
-  align-items: flex-start;
-  display: flex;
-  height: 61px;
-  left: 0px;
-  min-width: 414px;
-  position: absolute;
-  top: 0px;
-}
-.mealsinterfacem1c1 .paytext {
-  left: 191px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: absolute;
-  text-align: center;
-  top: 20px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .rectangle-four-meals {
-  align-items: flex-start;
-  background-color: white;
-  display: flex;
-  height: 439px;
-  justify-content: flex-end;
-  left: 0px;
-  min-width: 355px;
-  padding: 10.3px 12.5px;
-  position: absolute;
-  top: 0px;
-}
-.mealsinterfacem1c1 .restaurantaddress {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-bottom: -7px;
-  margin-left: 19px;
-  min-height: 17px;
-  min-width: 125px;
-  opacity: 0.83;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .second-four-meals {
-  align-items: flex-start;
-  display: flex;
-  margin-left: 59px;
-  min-width: 355px;
-}
-.mealsinterfacem1c1 .second-swi-teogry-bar {
-  align-items: center;
-  display: flex;
-  height: 94px;
-  left: 0px;
-  min-width: 813px;
-  position: absolute;
-  top: 0px;
-}
-.mealsinterfacem1c1 .servingtimeindicat1 {
-  left: 265px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: fixed;
-  text-align: center;
-  top: 112px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .servingtimeindicat {
-  left: 250px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: fixed;
-  text-align: center;
-  top: 132px;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .span0 {
-  color: rgba(255, 255, 255, 1);
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 17px;
-  font-weight: 600;
-}
-.mealsinterfacem1c1 .span1 {
-  color: rgba(255, 255, 255, 1);
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 13px;
-  font-weight: 600;
-}
-.mealsinterfacem1c1 .text-1 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 11px;
-  min-height: 17px;
-  min-width: 8px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .text-2 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  min-height: 17px;
-  min-width: 8px;
-  text-align: center;
-  white-space: nowrap;
-}
-.mealsinterfacem1c1 .white-bar {
-  background-color: white;
-  height: 31px;
-  left: 31px;
-  position: absolute;
-  top: 47px;
-  width: 359px;
-}
-.mealsinterfacem1c1 .x0 {
-  align-items: flex-start;
-  display: flex;
-  height: 439px;
-  left: 26px;
-  min-width: 769px;
-  position: absolute;
-  top: 170px;
-}
-.mealsinterfacem1c1 .yellowrectangle {
-  background-color: var(--supernova);
-  border-radius: 17px;
-  height: 60px;
-  left: 175px;
-  position: absolute;
-  top: 0px;
-  width: 65px;
-}
-.raleway-semi-bold-black-13px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-14px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-15px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-17px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-23px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-25px {
-  color: black;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-white-17px {
-  color: white;
-  font-family: "Raleway", Helvetica, Arial, serif;
-  font-size: 17px;
-}
-.roboto-medium-black-19px {
-  color: black;
-  font-family: "Roboto", Helvetica, Arial, serif;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 500;
-}
-.segoeui-bold-alizarin-crimson-20px {
-  color: var(--alizarin-crimson);
-  font-family: "SegoeUI-Bold", Helvetica, Arial, serif;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-}
-:root {
-  --alizarin-crimson: rgba(228, 42, 42, 1);
-  --supernova: rgba(250, 202, 0, 1);
+.swiper{
+  margin-top: 80px;
 }
 @keyframes animate-enter-frames {
   from {
@@ -643,3 +139,646 @@
     transform: scale(1);
   }
 }
+
+
+// .animate-enter {
+//   animation: animate-enter-frames 1s ease 0.5s 1 normal forwards;
+//   display: block;
+//   opacity: 0;
+//   transform: scale(1.1);
+// }
+// .enter {
+//   opacity: 1;
+// }
+// .mealsinterfacem1c1 {
+//   background-color: white;
+//   height: 680px;
+//   overflow: hidden;
+//   position: relative;
+//   width: 414px;
+//   opacity: 0;
+//   transform: scale(1.1);
+// }
+// .mealsinterfacem1c1 .auto-flex {
+//   align-items: flex-start;
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: -0px;
+//   min-height: 375px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .auto-flex1 {
+//   align-items: flex-start;
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: -0px;
+//   margin-left: 17px;
+//   min-height: 375px;
+//   width: 154px;
+// }
+
+// .mealsinterfacem1c1 .category2 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-left: 26px;
+//   margin-top: 0.5px;
+//   min-height: 18px;
+//   min-width: 54px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .category3 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-left: 14px;
+//   margin-top: 0.5px;
+//   min-height: 18px;
+//   min-width: 66px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .category4 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-left: 19px;
+//   margin-top: 0.5px;
+//   min-height: 18px;
+//   min-width: 34px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .category5 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-left: 25px;
+//   margin-top: 0.5px;
+//   min-height: 18px;
+//   min-width: 54px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .category5-1 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   min-height: 18px;
+//   min-width: 74px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .categoryname {
+//   left: 32px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   opacity: 0.8;
+//   position: absolute;
+//   text-align: center;
+//   top: 120px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .dishgreybackground {
+//   height: 108px;
+//   left: 0px;
+//   position: absolute;
+//   top: 70px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .dishgreybackground-1 {
+//   z-index: -1;
+//   height: 108px;
+//   left: 45px;
+//   position: absolute;
+//   top: 250px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .dishgreybackground-2 {
+//   z-index: -1;
+//   height: 108px;
+//   left: 218px;
+//   position: absolute;
+//   top: 250px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .dishgreybackground-3 {
+//   z-index: -1;
+//   height: 108px;
+//   left: 218px;
+//   position: absolute;
+//   top: 450px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .dishgreybackground-4 {
+//   z-index: -1;
+//   height: 108px;
+//   left: 45px;
+//   position: absolute;
+//   top: 450px;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .dishimage {
+//   border-radius: 120px;
+//   height: 114px;
+//   left: 14px;
+//   position: absolute;
+//   top: 0px;
+//   width: 126px;
+// }
+// .mealsinterfacem1c1 .dishimage-1 {
+//   border-radius: 120px;
+//   height: 114px;
+//   left: 57px;
+//   position: absolute;
+//   top: 180px;
+//   width: 126px;
+// }
+// .mealsinterfacem1c1 .dishimage-2 {
+//   border-radius: 120px;
+//   height: 114px;
+//   left: 232px;
+//   position: absolute;
+//   top: 180px;
+//   width: 126px;
+// }
+// .mealsinterfacem1c1 .dishimage-3 {
+//   border-radius: 120px;
+//   height: 114px;
+//   left: 57px;
+//   position: absolute;
+//   top: 380px;
+//   width: 126px;
+// }
+// .mealsinterfacem1c1 .dishimage-4 {
+//   border-radius: 120px;
+//   height: 114px;
+//   left: 232px;
+//   position: absolute;
+//   top: 380px;
+//   width: 126px;
+// }
+// .mealsinterfacem1c1 .dishname {
+//   left: 53px;
+//   letter-spacing: 0px;
+//   line-height: 390px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// } 
+// .mealsinterfacem1c1 .dishprice-1 {
+//   left: 60px;
+//   letter-spacing: 0px;
+//   line-height: 430px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// } 
+// .mealsinterfacem1c1 .dishprice-2 {
+//   left: 232px;
+//   letter-spacing: 0px;
+//   line-height: 430px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// } 
+// .mealsinterfacem1c1 .dishprice-3 {
+//   left: 60px;
+//   letter-spacing: 0px;
+//   line-height: 827px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// } 
+// .mealsinterfacem1c1 .dishprice-4 {
+//   left: 232px;
+//   letter-spacing: 0px;
+//   line-height: 827px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// } 
+// .mealsinterfacem1c1 .dishname-1 {
+//   left: 225px;
+//   letter-spacing: 0px;
+//   line-height: 390px;
+//   position: absolute;
+//   text-align: center;
+//   top: 123px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .dishname-2 {
+//   left: 53px;
+//   letter-spacing: 0px;
+//   line-height: 780px;
+//   position: absolute;
+//   text-align: center;
+//   top: 124px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .dishname-3 {
+//   left: 225px;
+//   letter-spacing: 0px;
+//   line-height: 780px;
+//   position: absolute;
+//   text-align: center;
+//   top: 124px;
+//   white-space: nowrap;
+// }
+
+// .mealsinterfacem1c1 .dishname-4 {
+//   left: 9px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: absolute;
+//   text-align: center;
+//   top: 122px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .dishname-5 {
+//   left: 10px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: absolute;
+//   text-align: center;
+//   top: 124px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .dishprice {
+//   left: 10px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: absolute;
+//   text-align: center;
+//   top: 144px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .drinks {
+//   z-index: 10;
+//   display: flex;
+//   width: 100%;
+//   letter-spacing: 0px;
+//   line-height: 57px;
+//   margin-left: 10px;
+//   margin-top: 0.5px;
+//   min-height: 18px;
+//   min-width: 44px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+
+
+// .mealsinterfacem1c1 .ellipse-blue {
+//   height: 11px;
+//   left: 165px;
+//   position: absolute;
+//   top: 419px;
+//   width: 11px;
+// }
+// .mealsinterfacem1c1 .ellipse-white {
+//   height: 11px;
+//   left: 185px;
+//   position: absolute;
+//   top: 419px;
+//   width: 11px;
+// }
+// .mealsinterfacem1c1 .first-four-meals {
+//   align-items: flex-start;
+//   display: flex;
+//   min-width: 355px;
+// }
+// .mealsinterfacem1c1 .first-swip-tegory-bar {
+//   height: 0px;
+//   left: 26px;
+//   position: absolute;
+//   top: 77px;
+//   width: 360px;
+// }
+// .mealsinterfacem1c1 .group-1 {
+//   align-items: flex-start;
+//   display: flex;
+//   min-width: 154px;
+// }
+// .mealsinterfacem1c1 .group-2 {
+//   align-items: flex-start;
+//   display: flex;
+//   min-width: 154px;
+// }
+// .mealsinterfacem1c1 .group-3 {
+//   align-items: flex-start;
+//   display: flex;
+//   margin-top: 20px;
+//   min-width: 154px;
+// }
+// .mealsinterfacem1c1 .help {
+//   left: 357px;
+//   letter-spacing: 0px;
+//   line-height: 20px;
+//   position: absolute;
+//   text-align: left;
+//   top: 28px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .inner-rect-four-meals {
+//   align-items: flex-end;
+//   display: flex;
+//   height: 375px;
+//   min-width: 325px;
+// }
+// .mealsinterfacem1c1 .lasermatelogo {
+//   height: 45px;
+//   left: 0px;
+//   position: absolute;
+//   top: 0px;
+//   width: 46px;
+// }
+// .mealsinterfacem1c1 .meal-1 {
+//   align-items: flex-start;
+//   display: flex;
+//   min-width: 154px;
+// }
+// .mealsinterfacem1c1 .meal-4 {
+//   align-items: flex-start;
+//   display: flex;
+//   margin-top: 20px;
+//   min-width: 154px;
+// }
+// .mealsinterfacem1c1 .nav-bar {
+//   align-items: flex-start;
+//   display: flex;
+//   height: 94px;
+//   left: 0px;
+//   min-width: 414px;
+//   position: absolute;
+//   top: 0px;
+// }
+// .mealsinterfacem1c1 .navbarfulllayout {
+//   align-items: center;
+//   background-size: 100% 100%;
+//   display: flex;
+//   flex-direction: column;
+//   left: 0px;
+//   min-height: 94px;
+//   padding: 14.5px 0;
+//   position: absolute;
+//   top: 0px;
+//   width: 414px;
+// }
+// .mealsinterfacem1c1 .overlap-group {
+//   height: 94px;
+//   left: 0px;
+//   position: absolute;
+//   top: 0px;
+//   width: 813px;
+// }
+// .mealsinterfacem1c1 .overlap-group-1 {
+//   height: 439px;
+//   position: relative;
+//   width: 355px;
+// }
+// .mealsinterfacem1c1 .overlap-group-2 {
+//   height: 177px;
+//   position: relative;
+//   width: 154px;
+// }
+// .mealsinterfacem1c1 .overlap-group-3 {
+//   height: 94px;
+//   position: relative;
+//   width: 414px;
+// }
+// .mealsinterfacem1c1 .overlap-group1 {
+//   height: 61px;
+//   left: 0px;
+//   position: absolute;
+//   top: 619px;
+//   width: 414px;
+// }
+// .mealsinterfacem1c1 .overlap-group2 {
+//   height: 61px;
+//   position: relative;
+//   width: 414px;
+// }
+// .mealsinterfacem1c1 .overlap-group3 {
+//   align-items: flex-start;
+//   background-color: white;
+//   display: flex;
+//   height: 31px;
+//   margin-left: 40px;
+//   margin-top: 31px;
+//   min-width: 359px;
+//   padding: 4px 16px;
+// }
+// .mealsinterfacem1c1 .overlap-group5 {
+//   align-items: flex-start;
+//   background-color: white;
+//   display: flex;
+//   height: 33px;
+//   margin-top: 14px;
+//   min-width: 414px;
+//   padding: 3.5px 14px;
+// }
+// .mealsinterfacem1c1 .pay-button {
+//   align-items: flex-start;
+//   display: flex;
+//   height: 61px;
+//   left: 0px;
+//   min-width: 414px;
+//   position: absolute;
+//   top: 0px;
+// }
+// .mealsinterfacem1c1 .paytext {
+//   left: 191px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: absolute;
+//   text-align: center;
+//   top: 20px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .rectangle-four-meals {
+//   align-items: flex-start;
+//   background-color: white;
+//   display: flex;
+//   height: 439px;
+//   justify-content: flex-end;
+//   left: 0px;
+//   min-width: 355px;
+//   padding: 10.3px 12.5px;
+//   position: absolute;
+//   top: 0px;
+// }
+// .mealsinterfacem1c1 .restaurantaddress {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-bottom: -7px;
+//   margin-left: 19px;
+//   min-height: 17px;
+//   min-width: 125px;
+//   opacity: 0.83;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .second-four-meals {
+//   align-items: flex-start;
+//   display: flex;
+//   margin-left: 59px;
+//   min-width: 355px;
+// }
+// .mealsinterfacem1c1 .second-swi-teogry-bar {
+//   align-items: center;
+//   display: flex;
+//   height: 94px;
+//   left: 0px;
+//   min-width: 813px;
+//   position: absolute;
+//   top: 0px;
+// }
+// .mealsinterfacem1c1 .servingtimeindicat1 {
+//   left: 265px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: fixed;
+//   text-align: center;
+//   top: 112px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .servingtimeindicat {
+//   left: 250px;
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   position: fixed;
+//   text-align: center;
+//   top: 132px;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .span0 {
+//   color: rgba(255, 255, 255, 1);
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 17px;
+//   font-weight: 600;
+// }
+// .mealsinterfacem1c1 .span1 {
+//   color: rgba(255, 255, 255, 1);
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 13px;
+//   font-weight: 600;
+// }
+// .mealsinterfacem1c1 .text-1 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   margin-left: 11px;
+//   min-height: 17px;
+//   min-width: 8px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .text-2 {
+//   letter-spacing: 0px;
+//   line-height: 24px;
+//   min-height: 17px;
+//   min-width: 8px;
+//   text-align: center;
+//   white-space: nowrap;
+// }
+// .mealsinterfacem1c1 .white-bar {
+//   background-color: white;
+//   height: 31px;
+//   left: 31px;
+//   position: absolute;
+//   top: 47px;
+//   width: 359px;
+// }
+// .mealsinterfacem1c1 .x0 {
+//   align-items: flex-start;
+//   display: flex;
+//   height: 439px;
+//   left: 26px;
+//   min-width: 769px;
+//   position: absolute;
+//   top: 170px;
+// }
+// .mealsinterfacem1c1 .yellowrectangle {
+//   background-color: var(--supernova);
+//   border-radius: 17px;
+//   height: 60px;
+//   left: 175px;
+//   position: absolute;
+//   top: 0px;
+//   width: 65px;
+// }
+// .raleway-semi-bold-black-13px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 13px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-black-14px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 14px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-black-15px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 15px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-black-17px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 17px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-black-23px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 23px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-black-25px {
+//   color: black;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 25px;
+//   font-style: normal;
+//   font-weight: 600;
+// }
+// .raleway-semi-bold-white-17px {
+//   color: white;
+//   font-family: "Raleway", Helvetica, Arial, serif;
+//   font-size: 17px;
+// }
+// .roboto-medium-black-19px {
+//   color: black;
+//   font-family: "Roboto", Helvetica, Arial, serif;
+//   font-size: 19px;
+//   font-style: normal;
+//   font-weight: 500;
+// }
+// .segoeui-bold-alizarin-crimson-20px {
+//   color: var(--alizarin-crimson);
+//   font-family: "SegoeUI-Bold", Helvetica, Arial, serif;
+//   font-size: 20px;
+//   font-style: normal;
+//   font-weight: 700;
+// }
+// :root {
+//   --alizarin-crimson: rgba(228, 42, 42, 1);
+//   --supernova: rgba(250, 202, 0, 1);
+// }
+// @keyframes animate-enter-frames {
+//   from {
+//     opacity: 0;
+//     transform: scale(1.1);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: scale(1);
+//   }
+// }

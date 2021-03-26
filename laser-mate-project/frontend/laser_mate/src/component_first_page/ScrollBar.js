@@ -1,49 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { connect } from 'react-redux';
 
+import { setNewCategoryId } from '../store/actions'
 
-const MenuItem = ({text, cat_id, selected}) => {
-
-  const handleClick = () => {
-    return cat_id;
-  }
-
+const MenuItem = ({text, selected}) => {
   return <p
     className={`menu-item ${selected ? 'active' : ''}`}
-    onClick={handleClick}
     >{text}</p>
-
-
 };
 
 
 export const Menu = (list, selected) =>
-  list.map(el => {
-    var {i, cat_id} = el;
+  list.map(({i, cat_id}) => <MenuItem text={i} key={i} cat_id={cat_id} selected={selected} />);
 
-    return <MenuItem text={i} key={i} cat_id={cat_id} selected={selected} />;
-  });
 
-const selected = "item1";
 
-class AppScrollBar extends Component {
+function AppScrollBar({category_id, categories, ...props}) {
+    console.log(categories, 'id', category_id)
+    const menu = Menu(categories);
 
-  render() {
-    
-    const { onSelectItem, selectedCategory, categories } = this.props;
-    
-    const menu = Menu(categories, selectedCategory);
+    const onSelectCategory = (name) => {
+      const data = categories.find(item => item.i === name)
+      console.log("damn")
+      console.log(data)
+      if (!data) return;
+      props.setNewCategoryId(data.cat_id)
+    }
 
     return (
-      <div className="App">
+      <div className="scroll">
         <ScrollMenu
           data={menu}
-          selected={selectedCategory}
-          onSelect={onSelectItem}
+          selected={(item) => console.log('selected', item)}
+          onSelect={onSelectCategory}
         />
       </div>
     );
-  }
 }
 
-export default AppScrollBar;
+export default connect(store => ({...store.category}), {setNewCategoryId})(AppScrollBar);

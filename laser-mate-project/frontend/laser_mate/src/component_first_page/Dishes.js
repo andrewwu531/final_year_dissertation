@@ -1,139 +1,80 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination, A11y } from "swiper";
+import { connect } from "react-redux";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/swiper.scss";
 
-const Dishes = (props) => {
+import { useDishes } from "./Hooks";
+import Categories from "./Categories";
 
+SwiperCore.use([Pagination, A11y]);
 
-    let dishes_image = []
-    let dishes = []
-    const url = "http://localhost:8000";
-    const grey_image = "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
+const url = "http://localhost:8000";
+const grey_image =
+  "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
 
+const Dishes = ({ category_id }) => {
+  const [dishPages, setDishPages] = useState([]);
+  const { dishes } = useDishes(category_id);
+  console.log("hell_cat")
+  console.log(category_id);
 
-    const [restaurantServingTimesCategorydishes, setRestaurantServingTimesCategorydishes] = useState({});
-    var restaurant_serving_time_category_id = props.categories_id[0];
+  useEffect(() => {
+    let count = 1;
+    setDishPages([]);
+    const total = [1];
 
-
-    console.log("dishdish");
-    console.log(restaurant_serving_time_category_id);
-
-    console.log(props);
-
-
-
-    useEffect(() => {
-        console.log("again");
-        console.log(restaurant_serving_time_category_id);
-
-        axios.post(`http://localhost:8000/api/restaurant_serving_time_category_dishes/search`, { restaurant_serving_time_category_id })
-            .then(res => {
-                console.log("useEffect | dishes ---------- ");
-                console.log(res.data);
-                setRestaurantServingTimesCategorydishes(res.data);
-            })
-            .catch(err => {
-            });
-    }, [restaurant_serving_time_category_id]);
-
-
-    const computeDishes = () => {
-
-
-        console.log("computeDishes ");
-        console.log(restaurantServingTimesCategorydishes.length);
-
-
-        for (let i = 0; i < restaurantServingTimesCategorydishes.length; i++) {
-
-            console.log("wonderfulx: " + restaurantServingTimesCategorydishes[i].dish_photo); 
-            
-
-            dishes.push({
-                description: restaurantServingTimesCategorydishes[i].dish_brief_descriptions,
-                price: restaurantServingTimesCategorydishes[i].dish_price,
-                photo: restaurantServingTimesCategorydishes[i].dish_photo
-            });
-        }
-    
-
-        for (let i = 0; i < dishes.length ; i++) {
-
-
-            if ( i == 0 ){
-                dishes_image.push(
-                    <div key={i}>
-                        <div className="dishname raleway-semi-bold-black-15px"> {dishes[i].description}</div>
-                        <div className="dishprice-1 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
-                        <img className="dishgreybackground-1" src={grey_image} />
-                        <img className="dishimage-1" src={ url + dishes[i].photo}/>
-                    </div>
-                );
-            }
-
-
-            else if ( i == 1 ){
-                console.log( " I am hard working");
-                dishes_image.push(
-                    <div key={i}>
-                        <div className="dishname-1 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
-                        <div className="dishprice-2 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
-                        <img className="dishgreybackground-2" src={grey_image} />
-                        <img className="dishimage-2" src={url + dishes[i].photo}/>
-                    </div>
-                );
-            }
-
-
-            else if ( i == 2 ){
-                console.log( " I am hard working");
-                dishes_image.push(
-                    <div key={i}>
-                        <div className="dishname-2 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
-                        <div className="dishprice-3 raleway-semi-bold-black-15px">£{dishes[i].price}</div>
-                        <img className="dishgreybackground-4" src={grey_image} />
-                        <img className="dishimage-3" src={"http://localhost:8000" + dishes[i].photo}/>
-                    </div>
-                );
-            }
-
-
-            else if ( i == 3 ){
-                console.log( " I am handsome");
-                dishes_image.push(
-                    <div key={i}>
-                        <div className="dishname-3 raleway-semi-bold-black-15px"> {dishes[i].description}</div>
-                        <div className="dishprice-4 raleway-semi-bold-black-15px">£{dishes[i].price} </div>
-                        <img className="dishgreybackground-3" src={grey_image} />
-                        <img className="dishimage-4" src={"http://localhost:8000" + dishes[i].photo}/>
-                    </div>
-
-                );
-            }
-
-
-            if ( i == 4 ) {
-                break;
-            }
-        }
-
-        console.log("333333333333333333");
-        console.log(dishes_image)
-        
-        
-
-        return (
-            <div>
-                {dishes_image}
-            </div>
-
-        );
-
+    for (const i in dishes) {
+      count++;
+      if (count == 4) {
+        count = 1;
+        total.push(total.length + 1);
+      }
     }
-    return (
-        <div>
-            {computeDishes()}
-        </div>
-    );
-}
 
-export default Dishes;
+    setDishPages(total);
+  }, [dishes]);
+
+  return (
+
+    <div>
+        {/* <div className='category_display'>
+            Main Course
+        </div> */}
+         
+        <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        >
+
+        {dishPages.map((p, index) => (
+            
+            <SwiperSlide key={index}>
+
+              <div className="dishes">
+                {dishes.slice(index * 4, (index + 1) * 4).map((dish, i) => (
+                <div key={i} className="item">
+                    <img className="img" src={url + dish.photo} />
+                    <img className="grey-image" src={grey_image} />
+                    <div className='dish-descriptions'> {dish.description}</div>
+                    <div className="dish-price">£{dish.price}</div>
+                </div>
+                ))}
+              </div> 
+
+            </SwiperSlide>
+        ))}
+
+        <div className='swiper'></div>
+        </Swiper>
+    </div>
+  );
+};
+
+export default connect((store) => ({ ...store.category }))(Dishes);

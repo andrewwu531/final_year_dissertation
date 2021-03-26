@@ -1,21 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import FirstPage from './containers/mobile_web/FirstPage';
+import { Provider } from 'react-redux';
 
+import FirstPage from './containers/mobile_web/FirstPage';
 import Not_Found from './containers/mobile_web/5NotFound';
-import Home from './containers/web/Home';
-import Contact_Us from './containers/web/Contact_Us';
+import store from './store'
 import './sass/main.scss';
+// import Contact_Us from './containers/web/Contact_Us';
+// import Home from './containers/web/Home';
 
 
 const App = () => (
-    <Router>
-        <Switch> 
-            <Route exact path='/:restaurant_id/:table_number' component={FirstPage} />
-            <Route exact path='/' component={Not_Found} />
-            <Route component={Not_Found} />
-        </Switch> 
-    </Router>
+    <Provider store={store}>
+        <Router>
+            <Switch> 
+                <Route exact path='/:restaurant_id/:table_number' component={FirstPage} />
+                <Route exact path='/' component={Not_Found} />
+                <Route component={Not_Found} />
+            </Switch> 
+        </Router>
+    </Provider>
 );
 
 export default App;
