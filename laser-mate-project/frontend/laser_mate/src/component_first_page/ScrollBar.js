@@ -6,7 +6,7 @@ import { setNewCategoryId } from '../store/actions'
 
 const MenuItem = ({text, selected}) => {
   return <p
-    className={`menu-item ${selected ? 'active' : ''}`}
+    className={`scroll-text ${selected ? 'active' : ''}`}
     >{text}</p>
 };
 
@@ -29,7 +29,7 @@ function AppScrollBar({category_id, categories, ...props}) {
     }
 
     return (
-      <div className="scroll">
+      <div className="white-scrollbar">
         <ScrollMenu
           data={menu}
           selected={(item) => console.log('selected', item)}

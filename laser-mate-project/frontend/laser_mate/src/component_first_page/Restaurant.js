@@ -19,7 +19,7 @@ const Restaurant = (props) => {
   console.log(restaurant);
 
   return (
-    <div className="restaurant_address">
+    <div className="restaurant-address">
       {restaurant.restaurant_name}, {restaurant.city}, {restaurant.postcode}
     </div>
   );

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 
 import { setNewCategories } from '../store/actions'
-import { useCategories } from './Hooks';
+import { useCategories } from '../hooks/Hooks';
 import Dishes from './Dishes';
 
 function Categories(props) {

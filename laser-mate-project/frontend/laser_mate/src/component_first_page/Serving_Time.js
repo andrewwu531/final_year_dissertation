@@ -120,9 +120,9 @@ const Serving_Time = (props) => {
         <div>
             <div className='title'>
             {/* <h1>Maki</h1> */}
-            <div>
-                {compute_current_serving_time_id()}
-            </div>
+                <div>
+                    {compute_current_serving_time_id()}
+                </div>
             </div>
             <Categories current_restaurant_serving_time_id={current_restaurant_serving_time_id}></Categories>
         </div>

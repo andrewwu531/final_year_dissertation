@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/swiper.scss";
 
-import { useDishes } from "./Hooks";
+import { useDishes } from "../hooks/Hooks";
 import Categories from "./Categories";
 
 SwiperCore.use([Pagination, A11y]);
@@ -17,8 +17,6 @@ const grey_image =
 const Dishes = ({ category_id }) => {
   const [dishPages, setDishPages] = useState([]);
   const { dishes } = useDishes(category_id);
-  console.log("hell_cat")
-  console.log(category_id);
 
   useEffect(() => {
     let count = 1;
@@ -59,9 +57,9 @@ const Dishes = ({ category_id }) => {
 
               <div className="dishes">
                 {dishes.slice(index * 4, (index + 1) * 4).map((dish, i) => (
-                <div key={i} className="item">
-                    <img className="img" src={url + dish.photo} />
-                    <img className="grey-image" src={grey_image} />
+                <div key={i} className="dish">
+                    <img className="dish-image" src={url + dish.photo} />
+                    <img className="grey-background" src={grey_image} />
                     <div className='dish-descriptions'> {dish.description}</div>
                     <div className="dish-price">£{dish.price}</div>
                 </div>
