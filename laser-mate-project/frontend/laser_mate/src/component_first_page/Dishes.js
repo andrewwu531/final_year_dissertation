@@ -10,27 +10,33 @@ import Categories from "./Categories";
 
 SwiperCore.use([Pagination, A11y]);
 
-const url = "http://localhost:8000";
-const grey_image =
-  "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
 
 const Dishes = ({ category_id }) => {
   const [dishPages, setDishPages] = useState([]);
   const { dishes } = useDishes(category_id);
 
+  const url = "http://localhost:8000";
+  const grey_image =
+    "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/60040bae6ebe2c806f50c88c/img/dish-grey-background@1x.png";
+
+  const ok_image =
+    "https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/6063286fcc6938f815b56cf6/img/ok-image-1@1x.png";
+
+
   useEffect(() => {
-    let count = 1;
+    let count = 0;
     setDishPages([]);
     const total = [1];
 
     for (const i in dishes) {
       count++;
-      if (count == 4) {
-        count = 1;
+      if (count > 4) {
+        count = 0;
         total.push(total.length + 1);
       }
     }
-
+    console.log("total");
+    console.log(total);
     setDishPages(total);
   }, [dishes]);
 
@@ -57,6 +63,7 @@ const Dishes = ({ category_id }) => {
 
               <div className="dishes">
                 {dishes.slice(index * 4, (index + 1) * 4).map((dish, i) => (
+                  
                 <div key={i} className="dish">
                     <img className="dish-image" src={url + dish.photo} />
                     <img className="grey-background" src={grey_image} />
@@ -74,5 +81,6 @@ const Dishes = ({ category_id }) => {
     </div>
   );
 };
+
 
 export default connect((store) => ({ ...store.category }))(Dishes);

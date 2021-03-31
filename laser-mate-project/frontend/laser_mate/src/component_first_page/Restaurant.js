@@ -15,8 +15,6 @@ const Restaurant = (props) => {
       .catch((err) => {});
   }, [restaurant_id_path]);
 
-  console.log("Restaurant.js end: ");
-  console.log(restaurant);
 
   return (
     <div className="restaurant-address">

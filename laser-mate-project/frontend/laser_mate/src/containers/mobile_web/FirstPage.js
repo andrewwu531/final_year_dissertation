@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { Route } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+
 
 import ServingTime from '../../component_first_page/Serving_Time';
 import Scrollbar from '../../component_first_page/ScrollBar';
 import Restaurant from '../../component_first_page/Restaurant';
-import history from '../../history/History';
+
 
 function FirstPage() {
     const location = useLocation();

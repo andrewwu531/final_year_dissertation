@@ -1,3 +1,14 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Raleway:500,600|Roboto:700,500");
+
+* {
+  box-sizing: border-box;
+}
+
+.border-1-3px-dove-gray {
+  border: 1.3px solid var(--dove-gray);
+}
+
 .blue-nav-bar-1 {
   background-color: #242d48;
   height: 42px;
@@ -17,7 +28,7 @@
 }
 
 .text_group {
-    margin-top: 20px;
+    margin-top: 26px;
 }
 
 .text_group .plus_sign_1 {
@@ -45,12 +56,145 @@
     white-space: nowrap;
 }
 
+.text_group .order_price {
+  margin-left: 95px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.order_line {
+    margin-left: 25px;
+    margin-top: 38px;
+    width: 320px;
+}
+
+.order_total_text {
+  margin-left: 30px;
+  margin-top: 8px;
+}
+
+.order_total_price {
+  margin-left: 80px;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  top: 428px;
+}
+
+.add_tips {
+  margin-left: 265px;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  top: 428px;
+}
+
+.add_tips_button {
+  height: 12px;
+  width: 12px;
+  margin-left: 325px;
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  top: 428px;
+}
+
+.meal_come_together {
+  margin-top: 13px;
+  margin-left: 184px;
+}
+
+.order_summary_radio_button {
+  background-color: white;
+  border-radius: 10px/9px;
+  height: 17px;
+  left: 323px;
+  position: absolute;
+  top: 450px;
+  width: 20px;
+}
+
+.special_request_text {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.special_request_textbox {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  height: 65px;
+  margin-left: 27px;
+  margin-top: 15px;
+  width: 320px;
+}
+
+.order_rectangle {
+  background-color: var(--supernova);
+  border-radius: 25px;
+  height: 33px;
+  width: 142px;
+  margin-top: 41px;
+  margin-left: 32px;
+}
+
+.order_rectangle_1 {
+  background-color: var(--supernova);
+  border-radius: 25px;
+  position: absolute;
+  height: 33px;
+  width: 142px;
+  margin-left: 200px;
+  top: 620px;
+}
+
+.order_backtomenu{
+  position: absolute;
+  top: 627px;
+  margin-left: 55px;
+  text-decoration: none;
+}
+
+.order_entercarddetails{
+  position: absolute;
+  top: 627px;
+  margin-left: 208px;
+}
+
+.order-grey-background {
+  align-items: center;
+  background-color: var(--black-haze);
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 605px;
+  z-index: -1;
+}
+
+.raleway-semi-bold-black-17px {
+  color: black;
+  font-family: "Raleway", Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 550;
+}
+
 .raleway-semi-bold-black-16px {
     color: black;
     font-family: "Raleway", Helvetica;
     font-size: 16px;
     font-style: normal;
     font-weight: 550;
+}
+
+.raleway-semi-bold-black-15px {
+  color: black;
+  font-family: "Raleway", Helvetica;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
 }
 
 .raleway-semi-bold-black-13px {
@@ -60,17 +204,16 @@
     font-style: normal;
     font-weight: 550;
 }
-.grey-background {
-  align-items: center;
-  background-color: var(--black-haze);
-  display: flex;
-  flex-direction: column;
-  height: 260px;
-  overflow: hidden;
-  width: 100%;
-  margin-top: 500px;
+
+.raleway-semi-bold-black-12px {
+  color: black;
+  font-family: "Raleway", Helvetica;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 550;
 }
 
 :root {
   --black-haze: rgba(246, 246, 246, 1);
+  --dove-gray: rgba(112, 112, 112, 1);
 }
