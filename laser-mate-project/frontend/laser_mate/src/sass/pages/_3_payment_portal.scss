@@ -1,0 +1,52 @@
+.blue-nav-bar-2 {
+  background-color: #242d48;
+  height: 42px;
+}
+
+.payment-portal-text {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 12px;
+  flex: 1 1 auto;
+  color: white;
+  font-family: "Raleway", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.payment-total-text {
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+.payment-total-price {
+  margin-top: -13px;
+  margin-left: 80px;
+}
+
+.payment-line-1 {
+  margin-left: 25px;
+  margin-top: 12px;
+  width: 320px;
+  height: 0.5px;
+}
+
+.payment-click-text {
+    text-decoration-line: underline;
+    margin-left: 40px;
+    margin-top: 12px;
+}
+
+.payment-to-scan-card-text {
+    margin-top: -15px;
+    margin-left: 80px;
+}
+
+.payment-line-2 {
+    margin-left: 25px;
+    margin-top: 12px;
+    width: 320px;
+    height: 0.5px;
+}

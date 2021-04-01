@@ -3,347 +3,281 @@
 * {
   box-sizing: border-box;
 }
-.animate-enter {
-  animation: animate-enter-frames 1s ease 0.5s 1 normal forwards;
-  display: block;
-  opacity: 0;
-  transform: scale(1.1);
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
 }
-.meals-interface-m1c1-2 {
-  background-color: white;
-  height: 680px;
-  overflow: hidden;
-  position: relative;
+.food-and-drink-ordering-platform-3 {
+  align-items: center;
+  background-color: var(--black-haze);
+  display: flex;
+  flex-direction: column;
+  height: 679px;
   width: 414px;
-  opacity: 0;
-  transform: scale(1.1);
 }
-.meals-interface-m1c1-2 .category2 {
+.food-and-drink-ordering-platform-3 .backtomenutext {
+  left: 29px;
   letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 27px;
-  margin-top: 1px;
-  min-height: 21px;
-  min-width: 48px;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .category3 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 16px;
-  margin-top: 1px;
-  min-height: 21px;
-  min-width: 62px;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .category4 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 20px;
-  margin-top: 1px;
-  min-height: 21px;
-  min-width: 32px;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .category5 {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-left: 24px;
-  margin-top: 1px;
-  min-height: 21px;
-  min-width: 52px;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .categoryname {
-  left: 33px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  opacity: 0.8;
+  line-height: 2px;
   position: absolute;
   text-align: center;
-  top: 120px;
+  top: 16px;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .dishgreybackground {
-  height: 108px;
+.food-and-drink-ordering-platform-3 .button {
+  background-color: var(--supernova);
+  border-radius: 25px;
+  height: 33px;
   left: 0px;
   position: absolute;
-  top: 70px;
-  width: 154px;
-}
-.meals-interface-m1c1-2 .dishimage {
-  border-radius: 120px;
-  height: 114px;
-  left: 14px;
-  position: absolute;
   top: 0px;
-  width: 126px;
+  width: 142px;
 }
-.meals-interface-m1c1-2 .dishname {
-  left: 9px;
+.food-and-drink-ordering-platform-3 .cardholdernametextbox {
+  align-self: center;
+  background-color: white;
+  height: 24px;
+  margin-right: 28px;
+  margin-top: 13px;
+  width: 294px;
+}
+.food-and-drink-ordering-platform-3 .cardnumbertext {
   letter-spacing: 0px;
   line-height: 24px;
-  position: absolute;
+  margin-bottom: -5px;
+  margin-left: 34.5px;
+  margin-top: 5px;
+  min-height: 19px;
+  min-width: 140px;
   text-align: center;
-  top: 122px;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .dishname-1 {
-  left: 11px;
+.food-and-drink-ordering-platform-3 .cardnumbertextbox {
+  align-self: center;
+  background-color: white;
+  height: 24px;
+  margin-right: 55px;
+  margin-top: 13px;
+  width: 267px;
+}
+.food-and-drink-ordering-platform-3 .cardtypetext {
   letter-spacing: 0px;
   line-height: 24px;
-  position: absolute;
+  margin-bottom: -5px;
+  margin-left: 34.5px;
+  margin-top: 14px;
+  min-height: 19px;
+  min-width: 60px;
   text-align: center;
-  top: 123px;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .dishname-2 {
-  left: 9px;
+.food-and-drink-ordering-platform-3 .cardtypetextbox {
+  background-color: white;
+  height: 24px;
+  margin-left: 31.5px;
+  margin-top: 15px;
+  width: 157px;
+}
+.food-and-drink-ordering-platform-3 .expiredatetext {
   letter-spacing: 0px;
   line-height: 24px;
-  position: absolute;
+  margin-bottom: -5px;
+  margin-left: 34.5px;
+  margin-top: 6px;
+  min-height: 19px;
+  min-width: 68px;
   text-align: center;
-  top: 123px;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .dishprice {
-  left: 10px;
+.food-and-drink-ordering-platform-3 .expiredatetextbox1 {
+  background-color: white;
+  height: 24px;
+  width: 50px;
+}
+.food-and-drink-ordering-platform-3 .expiredatetextbox2 {
+  background-color: white;
+  height: 24px;
+  margin-left: 5px;
+  width: 54px;
+}
+.food-and-drink-ordering-platform-3 .flex-row {
+  align-items: flex-start;
+  display: flex;
+  margin-left: 31.5px;
+  margin-top: 12px;
+  min-width: 109px;
+}
+.food-and-drink-ordering-platform-3 .flex-row-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 19px;
+  margin-left: 17.5px;
+  min-width: 93px;
+}
+.food-and-drink-ordering-platform-3 .flex-row-2 {
+  align-items: flex-start;
+  display: flex;
+  height: 38px;
+  margin-right: 6px;
+  margin-top: 18px;
+  min-width: 320px;
+}
+.food-and-drink-ordering-platform-3 .lasermatelogo {
+  align-self: flex-end;
+  height: 45px;
+  width: 46px;
+}
+.food-and-drink-ordering-platform-3 .line {
+  height: 1px;
+  margin-top: 11px;
+  width: 377px;
+}
+.food-and-drink-ordering-platform-3 .line1 {
+  height: 1px;
+  margin-top: 10px;
+  width: 377px;
+}
+.food-and-drink-ordering-platform-3 .line2 {
+  height: 1px;
+  margin-top: 13px;
+  width: 377px;
+}
+.food-and-drink-ordering-platform-3 .overlap-group {
+  align-items: center;
+  background-color: var(--cloud-burst);
+  display: flex;
+  height: 48px;
+  margin-top: -3px;
+  min-width: 414px;
+}
+.food-and-drink-ordering-platform-3 .overlap-group1 {
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 570px;
+  padding: 19.5px 14.5px;
+  width: 414px;
+}
+.food-and-drink-ordering-platform-3 .overlap-group2 {
+  align-self: flex-end;
+  height: 36px;
+  margin-left: 36px;
+  position: relative;
+  width: 142px;
+}
+.food-and-drink-ordering-platform-3 .overlap-group3 {
+  height: 36px;
+  position: relative;
+  width: 142px;
+}
+.food-and-drink-ordering-platform-3 .paybycashtext {
   letter-spacing: 0px;
   line-height: 24px;
-  position: absolute;
+  margin-left: 20.5px;
+  margin-top: 16px;
+  min-height: 26px;
+  min-width: 94px;
   text-align: center;
-  top: 143px;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .drinks {
+.food-and-drink-ordering-platform-3 .paymentportaltext {
   letter-spacing: 0px;
   line-height: 24px;
-  margin-left: 22px;
-  margin-top: 1px;
-  min-height: 21px;
+  margin-left: 110px;
+  min-height: 26px;
+  min-width: 122px;
+  text-align: center;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .placeordertext {
+  left: 35px;
+  letter-spacing: 0px;
+  line-height: 2px;
+  position: absolute;
+  text-align: center;
+  top: 16px;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .securitynumbertext {
+  align-self: center;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-bottom: -5px;
+  margin-right: 50px;
+  margin-top: 8px;
+  min-height: 19px;
+  min-width: 268px;
+  text-align: center;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .securitynumbertextbox {
+  background-color: white;
+  height: 24px;
+  margin-left: 32.5px;
+  margin-top: 10px;
+  width: 80px;
+}
+.food-and-drink-ordering-platform-3 .span {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Raleway", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.food-and-drink-ordering-platform-3 .span-1 {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Raleway", Helvetica;
+  font-size: 18px;
+  font-weight: 600;
+}
+.food-and-drink-ordering-platform-3 .text-1 {
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-bottom: -5px;
+  margin-left: 33.5px;
+  margin-top: 6px;
+  min-height: 19px;
+  min-width: 110px;
+  text-align: center;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .text-2 {
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-left: 22.5px;
+  margin-top: 17px;
+  min-height: 26px;
+  min-width: 212px;
+  text-align: center;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .text-3 {
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-left: 19.5px;
+  margin-top: 11px;
+  min-height: 26px;
+  min-width: 138px;
+  text-align: center;
+  white-space: nowrap;
+}
+.food-and-drink-ordering-platform-3 .totalprice {
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-left: 23px;
+  min-height: 19px;
   min-width: 40px;
   text-align: center;
   white-space: nowrap;
 }
-.meals-interface-m1c1-2 .ellipse-blue {
-  background-color: var(--green-blue);
-  border-radius: 5.5px;
-  height: 11px;
-  left: 165px;
-  position: absolute;
-  top: 419px;
-  width: 11px;
-}
-.meals-interface-m1c1-2 .ellipse-white {
-  background-color: var(--dove-gray);
-  border-radius: 5.5px;
-  height: 11px;
-  left: 185px;
-  position: absolute;
-  top: 419px;
-  width: 11px;
-}
-.meals-interface-m1c1-2 .first-four-meals {
-  align-items: flex-start;
-  display: flex;
-  height: 439px;
-  left: 26px;
-  min-width: 355px;
-  position: absolute;
-  top: 170px;
-}
-.meals-interface-m1c1-2 .first-swipping-category-bar {
-  height: 0px;
-  left: 26px;
-  position: absolute;
-  top: 77px;
-  width: 360px;
-}
-.meals-interface-m1c1-2 .flex-col {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: -0px;
-  margin-left: 17px;
-  min-height: 375px;
-  width: 154px;
-}
-.meals-interface-m1c1-2 .group-2 {
-  align-items: flex-start;
-  display: flex;
-  min-width: 154px;
-}
-.meals-interface-m1c1-2 .group-3 {
-  align-items: flex-start;
-  display: flex;
-  margin-bottom: -0px;
-  min-width: 154px;
-}
-.meals-interface-m1c1-2 .help {
-  left: 357px;
-  letter-spacing: 0px;
-  line-height: 20px;
-  position: absolute;
-  top: 648px;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .inner-rectangle-four-meals {
-  align-items: flex-end;
-  display: flex;
-  height: 375px;
-  min-width: 325px;
-}
-.meals-interface-m1c1-2 .lasermatelogo {
-  height: 45px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 46px;
-}
-.meals-interface-m1c1-2 .meal-4 {
-  align-items: flex-start;
-  display: flex;
-  margin-top: 20px;
-  min-width: 154px;
-}
-.meals-interface-m1c1-2 .navbarfulllayout {
-  align-items: center;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/5ffc7b766b43875ceda22007/releases/6063286fcc6938f815b56cf6/img/blue-nav-bar-7@1x.png);
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  left: 0px;
-  min-height: 94px;
-  padding: 13.5px 0;
-  position: absolute;
-  top: 0px;
-  width: 633px;
-}
-.meals-interface-m1c1-2 .okimage {
-  height: 69px;
-  left: 83px;
-  position: absolute;
-  top: 219px;
-  width: 58px;
-}
-.meals-interface-m1c1-2 .overlap-group {
-  height: 439px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 355px;
-}
-.meals-interface-m1c1-2 .overlap-group-1 {
-  height: 177px;
-  position: relative;
-  width: 154px;
-}
-.meals-interface-m1c1-2 .overlap-group1 {
-  height: 94px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 633px;
-}
-.meals-interface-m1c1-2 .overlap-group2 {
-  align-items: flex-start;
-  background-color: white;
-  display: flex;
-  height: 33px;
-  margin-right: 0.22px;
-  margin-top: 13px;
-  min-width: 633px;
-  padding: 2.5px 13px;
-}
-.meals-interface-m1c1-2 .overlap-group2-1 {
-  height: 439px;
-  position: relative;
-  width: 355px;
-}
-.meals-interface-m1c1-2 .pay-button {
-  align-items: flex-end;
-  background-color: var(--supernova);
-  border-radius: 17px;
-  display: flex;
-  height: 60px;
-  justify-content: flex-end;
-  left: 175px;
-  min-width: 65px;
-  padding: 12.7px 14.1px;
-  position: absolute;
-  top: 619px;
-}
-.meals-interface-m1c1-2 .paytext {
-  letter-spacing: 0px;
-  line-height: 24px;
-  min-height: 28px;
-  min-width: 36px;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .rectangle-four-meals {
-  align-items: flex-start;
-  background-color: white;
-  display: flex;
-  height: 439px;
-  justify-content: flex-end;
-  left: 0px;
-  min-width: 355px;
-  padding: 10.3px 12.5px;
-  position: absolute;
-  top: 0px;
-}
-.meals-interface-m1c1-2 .restaurantaddress {
-  letter-spacing: 0px;
-  line-height: 24px;
-  margin-bottom: -5px;
-  margin-right: 215.22px;
-  min-height: 19px;
-  min-width: 116px;
-  opacity: 0.83;
-  text-align: center;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .servingtimeindicat {
-  left: 193px;
-  letter-spacing: 0px;
-  line-height: 24px;
-  position: fixed;
-  text-align: center;
-  top: 109px;
-  white-space: nowrap;
-}
-.meals-interface-m1c1-2 .span0 {
-  color: rgba(255, 255, 255, 1);
-  font-family: "Raleway", Helvetica;
-  font-size: 17px;
-  font-weight: 600;
-}
-.meals-interface-m1c1-2 .span1 {
-  color: rgba(255, 255, 255, 1);
-  font-family: "Raleway", Helvetica;
-  font-size: 13px;
-  font-weight: 600;
-}
-.meals-interface-m1c1-2 .text-1 {
+.food-and-drink-ordering-platform-3 .totaltext {
   letter-spacing: 0px;
   line-height: 24px;
   min-height: 19px;
-  min-width: 10px;
+  min-width: 30px;
   text-align: center;
   white-space: nowrap;
-}
-.meals-interface-m1c1-2 .white-bar {
-  background-color: white;
-  height: 31px;
-  left: 31px;
-  position: absolute;
-  top: 47px;
-  width: 359px;
 }
 .raleway-semi-bold-black-13px {
   color: black;
@@ -359,59 +293,28 @@
   font-style: normal;
   font-weight: 600;
 }
-.raleway-semi-bold-black-15px {
+.raleway-semi-bold-black-18px {
   color: black;
   font-family: "Raleway", Helvetica;
-  font-size: 15px;
+  font-size: 18px;
+}
+.raleway-semi-bold-black-18px-2 {
+  color: black;
+  font-family: "Raleway", Helvetica;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
 }
-.raleway-semi-bold-black-17px {
-  color: black;
-  font-family: "Raleway", Helvetica;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-black-23px {
-  color: black;
-  font-family: "Raleway", Helvetica;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 600;
-}
-.raleway-semi-bold-white-17px {
+.raleway-semi-bold-white-18px {
   color: white;
   font-family: "Raleway", Helvetica;
-  font-size: 17px;
-}
-.roboto-medium-black-19px {
-  color: black;
-  font-family: "Roboto", Helvetica;
-  font-size: 19px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
-}
-.segoeui-bold-alizarin-crimson-20px {
-  color: var(--alizarin-crimson);
-  font-family: "SegoeUI-Bold", Helvetica;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
 }
 :root {
-  --alizarin-crimson: rgba(228, 42, 42, 1);
+  --black-haze: rgba(246, 246, 246, 1);
+  --cloud-burst: rgba(36, 45, 72, 1);
   --dove-gray: rgba(112, 112, 112, 1);
-  --green-blue: rgba(10, 108, 187, 1);
   --supernova: rgba(250, 202, 0, 1);
-}
-@keyframes animate-enter-frames {
-  from {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
